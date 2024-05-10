@@ -3,11 +3,12 @@
 # RUN AT YOUR OWN RISK!!
 y | LC_ALL=en_US.UTF-8 sudo pacman -Syu
 y | LC_ALL=en_US.UTF-8 sudo pacman -S git neovim neofetch tmux nvidia nvidia-settings nvidia-settings curl
-# get dotfiles
-git clone --bare https://github.com/Pix3lexe/dotfiles.git $HOME/.dotfiles
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-dotfiles checkout -f
-dotfiles config --local status.showUntrackedFiles no
+# get dotfiles (but assume you cloned the repo before)
+#git clone --bare https://github.com/Pix3lexe/dotfiles.git $HOME/.dotfiles
+#alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+#dotfiles checkout -f
+#dotfiles config --local status.showUntrackedFiles no
+#
 # install oh-my-posh
 sudo curl -s https://ohmyposh.dev/install.sh | bash -s
 # install pyenv
