@@ -2,7 +2,7 @@
 # params $1 = 'home' if youre using your current setup
 # RUN AT YOUR OWN RISK!!
 y | LC_ALL=en_US.UTF-8 sudo pacman -Syu
-y | LC_ALL=en_US.UTF-8 sudo pacman -S git neovim neofetch tmux nvidia nvidia-settings nvidia-settings curl
+y | LC_ALL=en_US.UTF-8 sudo pacman -S git neovim neofetch tmux nvidia nvidia-settings nvidia-settings curl dconf
 # get dotfiles (but assume you cloned the repo before)
 #git clone --bare https://github.com/Pix3lexe/dotfiles.git $HOME/.dotfiles
 #alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
