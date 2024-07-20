@@ -16,6 +16,7 @@ alias cd..='cd ..'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias sshdv='ssh dv624236@troom1gw.zam.kfa-juelich.de'
 alias rmorphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias x='chmod u+x'
 
 eval "$(oh-my-posh init bash --config ~/.poshthemes/catppuccin.omp.json)"
 export EDITOR="nvim"
