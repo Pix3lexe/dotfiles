@@ -1,6 +1,9 @@
+local conform = require("conform")
+
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
+    cpp = { "clang-format"}
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
@@ -10,6 +13,13 @@ local options = {
   --   timeout_ms = 500,
   --   lsp_fallback = true,
   -- },
+  vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+    conform.format({
+      lsp_fallback = true,
+      async = false,
+      timeout_ms = 500,
+    })
+  end, { desc = "Format file or range (in visual mode)"})
 }
 
-require("conform").setup(options)
+conform.setup(options)
