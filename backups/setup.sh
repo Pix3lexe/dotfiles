@@ -13,6 +13,9 @@ dotfiles config --local status.showUntrackedFiles no
 sudo curl -s https://ohmyposh.dev/install.sh | bash -s
 # install pyenv
 # sudo curl https://pyenv.run | bash
+#
+# setup tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 #setup xorg.conf
 if [ $1 = 'home' ]; then
@@ -24,7 +27,7 @@ fi
 
 git config --global user.name "Simon Hermanns"
 git config --global user.email "hermanns.simon@gmail.com"
-
+git config --global credential.helper store
 # after that (if youre using gnome) install the following extensions: AppIndicator and KStatusNotifierItem Support, Blur my Shell, Coverflow Alt-Tab, Dash to Dock, [QSTweak] Quick Setting Tweaker, Unblank lock screen, User Themes
 # Install the theme: Layan-Dark
 # Install Sweet-cursors and Deepin2022-Dark icons
