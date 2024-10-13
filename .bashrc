@@ -26,4 +26,3 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$PATH:~/packages/icat/"
 eval "$(pyenv init -)"
-export KITTY_LISTEN_ON=$(ls /tmp | grep mykitty)
