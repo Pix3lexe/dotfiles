@@ -19,6 +19,7 @@ alias rmorphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias x='chmod u+x'
 alias saveconf='/home/simon/backups/gnome_saveconf.sh'
 
+export PATH="$PATH:$HOME/.local/bin"
 eval "$(oh-my-posh init bash --config ~/.poshthemes/catppuccin.omp.json)"
 export EDITOR="nvim"
 export PYENV_ROOT="$HOME/.pyenv"
