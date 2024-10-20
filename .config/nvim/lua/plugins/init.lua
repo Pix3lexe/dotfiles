@@ -1,7 +1,7 @@
 return {
     {
         "stevearc/conform.nvim",
-        event = { "BufReadPre", "BufNewFile" },
+        event = { "BufReadPre", "BufNewFile", "BufWritePre" },
         -- event = 'BufWritePre', -- uncomment for format on save
         config = function()
             require("configs.conform")
@@ -28,7 +28,7 @@ return {
             require("guess-indent").setup({})
         end,
     },
-    { "github/copilot.vim", lazy = true },
+    { "github/copilot.vim",   lazy = true },
     {
         "adelarsq/image_preview.nvim",
         event = "VeryLazy",
@@ -45,4 +45,38 @@ return {
         end,
         ft = { "markdown" },
     },
+    {
+        "mfussenegger/nvim-dap"
+    },
+    {
+        "jay-babu/mason-nvim-dap.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "mfussenegger/nvim-dap",
+        },
+        opts = {
+            handlers = {},
+        },
+    },
+    {
+        "rcarriga/nvim-dap-ui",
+        dependencies = "mfussenegger/nvim-dap",
+        event = "VeryLazy",
+        config = function()
+            local dap = require("dap")
+            local dapui = require("dapui")
+            dapui.setup()
+            dap.listeners.after.event_initialized["dapui_config"] = function()
+                dapui.open()
+            end
+            dap.listeners.before.event_terminated["dapui_config"] = function()
+                dapui.close()
+            end
+            dap.listeners.before.event_exited["dapui_config"] = function()
+                dapui.close()
+            end
+        end
+    },
+    { "nvim-neotest/nvim-nio" },
 }

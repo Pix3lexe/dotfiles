@@ -19,4 +19,12 @@ map("n", "<leader>md", function()
     vim.cmd("MarkdownPreview")
 end, { desc = "Preview Markdown file", silent = true })
 
+map("n", "<leader>bp", function()
+    vim.cmd("DapToggleBreakpoint")
+end, { desc = "Toggle breakpoint", silent = true })
+
+map("n", "<leader>dr", function()
+    vim.cmd("DapContinue")
+end, { desc = "Start or continue the debugger", silent = true })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
