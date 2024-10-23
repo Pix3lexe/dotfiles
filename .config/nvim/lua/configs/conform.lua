@@ -1,9 +1,23 @@
 local conform = require("conform")
 
+conform.formatters["clang-format-14"] = {
+    command = "clang-format-14",
+}
+
+local function get_cpp_formatter()
+    local cwd = vim.loop.cwd()
+
+    if cwd:match("petrack") then
+        return "clang-format-14"
+    else
+        return "clang-format"
+    end
+end
+
 local options = {
     formatters_by_ft = {
         lua = { "stylua" },
-        cpp = { "clang-format" }
+        cpp = { get_cpp_formatter() }
         -- css = { "prettier" },
         -- html = { "prettier" },
     },
