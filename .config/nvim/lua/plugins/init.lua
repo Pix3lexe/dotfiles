@@ -1,5 +1,24 @@
 return {
 	{
+		"nvim-treesitter/nvim-treesitter",
+		opts = {
+			ensure_installed = {
+				"lua",
+				"luadoc",
+				"printf",
+				"vim",
+				"vimdoc",
+				"c",
+				"cpp",
+				"python",
+				"markdown",
+				"json",
+				"css",
+				"html",
+			},
+		},
+	},
+	{
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile", "BufWritePre" },
 		-- event = 'BufWritePre', -- uncomment for format on save
