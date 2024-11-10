@@ -79,6 +79,7 @@ alias c='clear'
 alias nv='nvim'
 alias dockfix='$HOME/backups/dockfix.sh'
 alias saveconf='/home/simon/backups/gnome_saveconf.sh'
+alias lg='lazygit'
 
 # shell integrations
 eval "$(fzf --zsh)"
@@ -88,3 +89,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PATH="$PATH:$HOME/packages/icat:$HOME/projects/cpp/petrack/build:$HOME/packages/pfetch"
+
+_fix_cursor(){
+    echo -ne '\e[3 q'
+}
+precmd_functions+=(_fix_cursor)
