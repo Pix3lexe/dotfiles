@@ -29,8 +29,6 @@ return {
 	{ "mfussenegger/nvim-jdtls" },
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
-
-	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
@@ -102,7 +100,23 @@ return {
 		"folke/flash.nvim",
 		event = "VeryLazy",
 		---@type Flash.Config
-		opts = {},
+		opts = {
+			highlight = {
+				backdrop = true,
+				matches = true,
+				priority = 5000,
+				groups = {
+					match = "FlashMatch",
+					current = "FlashCurrent",
+					backdrop = "FlashBackdrop",
+					label = "FlashLabel", -- Use default label group
+				},
+			},
+		},
+		config = function()
+			local colors = dofile(vim.g.base46_cache .. "colors")
+			vim.api.nvim_set_hl(0, "FlashLabel", { fg = colors.grey, bg = colors.red })
+		end,
         -- stylua: ignore
         keys = {
             { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
