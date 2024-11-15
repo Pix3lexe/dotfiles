@@ -126,4 +126,21 @@ return {
             { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
         },
 	},
+	{
+		"mistricky/codesnap.nvim",
+		build = "make",
+		keys = {
+			{
+				"<leader>cc",
+				"<cmd>CodeSnap<cr>",
+				mode = "x",
+				desc = "Save selected code snapshot into clipboard",
+			},
+		},
+		opts = {
+			bg_theme = "grape",
+			watermark = "PixelHD",
+			has_breadcrumbs = true,
+		},
+	},
 }
