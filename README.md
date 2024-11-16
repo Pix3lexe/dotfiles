@@ -27,7 +27,6 @@ Dotfiles are configuration files for various programs and tools, often starting 
 - Configurations for tools like:
   - **Neovim** (`nvim`)
   - **Zsh** (`zsh`)
-  - **Git** (`git`)
   - **Tmux** (`tmux`)
   - **Kitty** (terminal emulator)
 - Designed for Linux-based systems (tested on Arch Linux).
@@ -64,8 +63,6 @@ dotfiles/
 │   └── .zshrc
 ├── tmux/            # Tmux configuration
 │   └── .tmux.conf
-├── git/             # Git configuration
-│   └── .gitconfig
 └── ...
 ```
 
