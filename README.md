@@ -47,7 +47,7 @@ Dotfiles are configuration files for various programs and tools, often starting 
    
 2. Clone this repository to your home directory or any preferred location:
    ```bash
-   git clone https://github.com/yourusername/dotfiles.git ~/dotfiles
+   git clone https://github.com/Pix3lexe/dotfiles.git ~/dotfiles
    cd ~/dotfiles
    ```
 
