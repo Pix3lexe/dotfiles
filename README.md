@@ -92,11 +92,6 @@ Use **GNU Stow** to symlink configuration files to their respective locations.
    ~/.config/nvim -> ~/dotfiles/nvim/.config/nvim
    ```
 
-3. Stow all configurations:
-   ```bash
-   stow -t ~ */
-   ```
-
 ### Unstow Configurations
 To remove the symlinks created by Stow:
 ```bash
