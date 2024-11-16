@@ -8,8 +8,7 @@
 }
 
 window#waybar {
-    background: transparent;
-    background-color: @crust;
+    background-color: rgba(17, 17, 27, 0.5);
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
@@ -66,7 +65,8 @@ button:hover {
 #tray,
 #network,
 #mode,
-#scratchpad {
+#scratchpad,
+#custom-power_off {
   margin-top: 2px;
   margin-bottom: 2px;
   margin-left: 4px;
@@ -107,6 +107,11 @@ button:hover {
 #battery {
     color: @green;
     border-bottom: 2px solid @green;
+}
+
+#custom-power_off {
+    color: @red;
+    border-bottom: 2px solid @red;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

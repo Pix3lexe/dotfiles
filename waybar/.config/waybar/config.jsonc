@@ -2,7 +2,7 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock"],
+  "modules-right": ["network", "pulseaudio", "battery", "clock", "custom/power_off"],
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
@@ -24,7 +24,7 @@
   },
   "network": {
     "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-ethernet": "<span size='13000' foreground='#f5e0dc'> </span>",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
@@ -36,5 +36,11 @@
           "default": ["", "", " "]
       },
       "on-click": "pavucontrol"
+  },
+  "custom/power_off": {
+    "format": "<span size='13000' foreground='#f38ba8'> </span>",
+    "tooltip": "Power Off",
+    "on-click": "systemctl poweroff",  // Shutdown
+    "on-right-click": "systemctl reboot"  // Reboot
   }
 }
