@@ -139,7 +139,7 @@ return {
 		},
 		opts = {
 			bg_theme = "grape",
-			watermark = "PixelHD",
+			watermark = "Pix3lexe",
 			has_breadcrumbs = true,
 		},
 	},
