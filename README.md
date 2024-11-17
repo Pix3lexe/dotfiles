@@ -28,6 +28,7 @@ Dotfiles are configuration files for various programs and tools, often starting 
   - **Neovim** (`nvim`)
   - **Zsh** (`zsh`)
   - **Tmux** (`tmux`)
+  - **Yazi** (`yazi`)
   - **Kitty** (terminal emulator)
 - Designed for Linux-based systems (tested on Arch Linux).
 - Compatible with **GNU Stow** for simple symlink creation.
