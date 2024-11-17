@@ -47,13 +47,6 @@ return {
 	},
 	{ "github/copilot.vim", lazy = true },
 	{
-		"adelarsq/image_preview.nvim",
-		event = "VeryLazy",
-		config = function()
-			require("image_preview").setup({})
-		end,
-	},
-	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		build = "cd app && yarn install",
