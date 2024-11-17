@@ -1,3 +1,5 @@
+export PATH="$PATH:$HOME/packages/icat:$HOME/projects/cpp/petrack/build:$HOME/packages/pfetch"
+pfetch
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -87,7 +89,6 @@ export EDITOR="nvim"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-export PATH="$PATH:$HOME/packages/icat:$HOME/projects/cpp/petrack/build:$HOME/packages/pfetch"
 
 _fix_cursor(){
     echo -ne '\e[3 q'
