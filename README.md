@@ -38,6 +38,9 @@ Dotfiles are configuration files for various programs and tools, often starting 
 
 ## 🖥️ **Installation** <a name="installation"></a>
 
+### **TODO**
+List dependencies
+
 ### **Prerequisites**
 1. Install GNU Stow:
    ```bash
