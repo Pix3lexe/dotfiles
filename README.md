@@ -59,15 +59,15 @@ NOTE: If you're on Arch you can also install them by running:
 ./install.sh
 ```
 
-- **Hyprland**: Window manager for Wayland.
-- **Wofi**: Application launcher.
-- **Waybar**: Status bar for Wayland.
+- **hyprland**: Window manager for Wayland.
+- **wofi**: Application launcher.
+- **waybar**: Status bar for Wayland.
 - **ttf-font-awesome**: Icon font for status bars and UI customization.
-- **Hyprshot**: Screenshot tool for Hyprland.
-- **Swaync**: Notification daemon.
-- **Hyprlock**: Screen locker for Hyprland.
-- **Hypridle**: Idle management tool.
-- **Hyprpaper**: Wallpaper manager for Hyprland.
+- **hyprshot**: Screenshot tool for Hyprland.
+- **swaync**: Notification daemon.
+- **hyprlock**: Screen locker for Hyprland.
+- **hypridle**: Idle management tool.
+- **hyprpaper**: Wallpaper manager for Hyprland.
 - **nwg-look**: GTK theme switcher for Wayland.
 - **xdg-desktop-portal-gtk**: Desktop portal for GTK integration.
 - **xdg-desktop-portal-hyprland**: Desktop portal specific to Hyprland.
