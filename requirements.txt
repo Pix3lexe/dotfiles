@@ -1,0 +1,19 @@
+# Core dependencies
+hyprland
+wofi
+waybar
+ttf-font-awesome
+swaync
+hyprlock
+hypridle
+hyprpaper
+nwg-look
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
+
+# AUR dependencies
+hyprshot
+catppuccin-gtk-theme-mocha
+
+# Misc
+wl-clipboard

@@ -38,9 +38,6 @@ Dotfiles are configuration files for various programs and tools, often starting 
 
 ## 🖥️ **Installation** <a name="installation"></a>
 
-### **TODO**
-List dependencies
-
 ### **Prerequisites**
 1. Install GNU Stow:
    ```bash
@@ -54,6 +51,28 @@ List dependencies
    cd ~/dotfiles
    ```
 
+### 🛠️ **Hyprland Dependencies**
+
+Before using these dotfiles, make sure the following dependencies are installed (these are specific to the Hyprland-based environment and related tools).<br>
+NOTE: If you're on Arch you can also install them by running:
+```bash
+./install.sh
+```
+
+- **Hyprland**: Window manager for Wayland.
+- **Wofi**: Application launcher.
+- **Waybar**: Status bar for Wayland.
+- **ttf-font-awesome**: Icon font for status bars and UI customization.
+- **Hyprshot**: Screenshot tool for Hyprland.
+- **Swaync**: Notification daemon.
+- **Hyprlock**: Screen locker for Hyprland.
+- **Hypridle**: Idle management tool.
+- **Hyprpaper**: Wallpaper manager for Hyprland.
+- **nwg-look**: GTK theme switcher for Wayland.
+- **xdg-desktop-portal-gtk**: Desktop portal for GTK integration.
+- **xdg-desktop-portal-hyprland**: Desktop portal specific to Hyprland.
+- **catppuccin-gtk-theme-mocha**: GTK theme for a consistent aesthetic.
+- **wl-clipboard**: Clipboard manager for Wayland.
 ---
 
 ## 📁 **Structure** <a name="structure"></a>
