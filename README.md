@@ -1,6 +1,6 @@
 # Pix3lexe dotfiles
 
-Welcome to my dotfiles repository! This repository contains the configuration files (dotfiles) I use to set up and customize my development environment. These dotfiles are modular and managed using **GNU Stow** for efficient deployment.
+Welcome to my dotfiles repository! This repository contains the configuration files (dotfiles) I use to set up and customize my development environment. These dotfiles are modular and managed using **GNU Stow** for easy deployment.
 
 ---
 
@@ -19,7 +19,7 @@ Welcome to my dotfiles repository! This repository contains the configuration fi
 Dotfiles are configuration files for various programs and tools, often starting with a dot (`.`). This repository:
 - Provides a backup of my preferred environment setup.
 - Allows quick deployment across systems.
-- Uses **GNU Stow** for modularity and ease of management.
+- Uses **GNU Stow**.
 
 ---
 
