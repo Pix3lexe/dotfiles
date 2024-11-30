@@ -129,6 +129,12 @@ return {
 				mode = "x",
 				desc = "Save selected code snapshot into clipboard",
 			},
+			{
+				"<leader>cs",
+				"<Esc><cmd>CodeSnapSave<cr>",
+				mode = "x",
+				desc = "Save selected code snapshot in ~/Pictures",
+			},
 		},
 		opts = {
 			bg_theme = "grape",
@@ -164,5 +170,15 @@ return {
 				line_number_text = "Line %s out of %s", -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
 			})
 		end,
+	},
+	{
+		"folke/todo-comments.nvim",
+		event = { "BufRead", "BufNewFile" },
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
 	},
 }
