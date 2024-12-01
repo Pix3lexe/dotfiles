@@ -40,13 +40,6 @@ return {
 	{ "hrsh7th/nvim-cmp" },
 	{ "L3MON4D3/LuaSnip" },
 	{
-		"nmac427/guess-indent.nvim",
-		config = function()
-			require("guess-indent").setup({})
-		end,
-	},
-	{ "github/copilot.vim", lazy = true },
-	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		build = "cd app && yarn install",
@@ -92,32 +85,9 @@ return {
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
-		---@type Flash.Config
-		opts = {
-			highlight = {
-				backdrop = true,
-				matches = true,
-				priority = 5000,
-				groups = {
-					match = "FlashMatch",
-					current = "FlashCurrent",
-					backdrop = "FlashBackdrop",
-					label = "FlashLabel", -- Use default label group
-				},
-			},
-		},
 		config = function()
-			local colors = dofile(vim.g.base46_cache .. "colors")
-			vim.api.nvim_set_hl(0, "FlashLabel", { fg = colors.grey, bg = colors.red })
+			require("configs.flash") --this is the only thing I want to have left besides the event and plugin name
 		end,
-        -- stylua: ignore
-        keys = {
-            { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-            { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-            { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-            { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-            { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-        },
 	},
 	{
 		"mistricky/codesnap.nvim",
