@@ -291,4 +291,8 @@ return {
     config = require 'configs.presence',
   },
   { 'akinsho/toggleterm.nvim', version = '*', config = require 'configs.toggleterm' },
+  {
+    'folke/snacks.nvim',
+    config = require 'configs.snacks',
+  },
 }
