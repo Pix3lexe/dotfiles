@@ -8,7 +8,7 @@ return function()
       disabled_filetypes = { 'NvimTree', 'packer' },
     },
     sections = {
-      lualine_a = { 'mode' },
+      lualine_a = { { 'mode', icon = '' } },
       lualine_b = { 'branch', 'diff', 'diagnostics' },
       lualine_c = { 'filename' },
       lualine_x = {
