@@ -2,6 +2,7 @@ return function()
   -- See `:help cmp`
   local cmp = require 'cmp'
   local luasnip = require 'luasnip'
+  local lspkind = require 'lspkind'
   luasnip.config.setup {}
 
   cmp.setup {
@@ -73,6 +74,17 @@ return function()
       { name = 'nvim_lsp' },
       { name = 'luasnip' },
       { name = 'path' },
+    },
+    formatting = {
+      format = lspkind.cmp_format {
+        mode = 'symbol_text',
+        maxwidth = 50,
+        ellipsis_char = '...',
+      },
+    },
+    window = {
+      completion = cmp.config.window.bordered(), -- Add border to the completion window
+      documentation = cmp.config.window.bordered(), -- Add border to the documentation window
     },
   }
 end

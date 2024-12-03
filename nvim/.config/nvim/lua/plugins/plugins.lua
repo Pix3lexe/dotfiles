@@ -111,6 +111,7 @@ return {
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
+      'onsails/lspkind.nvim',
     },
     config = require 'configs.nvim-cmp',
   },
@@ -118,10 +119,7 @@ return {
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 1000,
-    config = function()
-      require('catppuccin').setup { flavour = 'mocha' }
-      vim.cmd.colorscheme 'catppuccin'
-    end,
+    config = require 'configs.catppuccin',
   },
 
   -- Highlight todo, notes, etc in comments
