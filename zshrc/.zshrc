@@ -1,5 +1,8 @@
 export PATH="$PATH:$HOME/packages/icat:$HOME/projects/cpp/petrack/build:$HOME/packages/pfetch"
-pfetch
+# pfetch
+# cowsay -r $(fortune)
+# fortune | chara say -r | lolcat
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.

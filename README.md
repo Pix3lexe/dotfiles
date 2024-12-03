@@ -10,7 +10,7 @@ Welcome to my dotfiles repository! This repository contains the configuration fi
 - [Installation](#installation)
 - [Structure](#structure)
 - [Usage](#usage)
-- [License](#license)
+- [Screenshots](#screenshots)
 - [Contact](#contact)
 
 ---
@@ -126,8 +126,16 @@ Alternatively you can run the setup script (only works on Arch), which will set 
 
 ---
 
-## 📜 **License** <a name="license"></a>
-This repository is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and share these dotfiles.
+## 📸 **Screenshots** <a name="screenshots"></a>
+- **Terminal**
+![image](https://github.com/user-attachments/assets/811c37d3-742d-44e2-9638-b81f4752aa8b)
+
+- **Neovim**
+![image](https://github.com/user-attachments/assets/fcf77a65-aa23-4f7d-8c71-fcc6c73bf2fd)
+
+- **Desktop and Wofi**
+![image](https://github.com/user-attachments/assets/157aad80-2b0c-4c0e-94df-9c4d263fe1d3)
+
 
 ---
 
