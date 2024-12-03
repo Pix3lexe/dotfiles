@@ -295,4 +295,9 @@ return {
     'folke/snacks.nvim',
     config = require 'configs.snacks',
   },
+  {
+    'stevearc/oil.nvim',
+    config = require 'configs.oil',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
 }
