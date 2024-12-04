@@ -32,7 +32,7 @@ return function()
           gitsigns.nav_hunk 'prev'
         end
       end, { desc = 'Jump to previous git [c]hange' })
-
+      --[[ remove comments to enable git hunk again
       -- Actions
       -- visual mode
       map('v', '<leader>hs', function()
@@ -41,7 +41,7 @@ return function()
       map('v', '<leader>hr', function()
         gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
       end, { desc = 'reset git hunk' })
-      -- normal mode
+      -- normal mode 
       map('n', '<leader>hs', gitsigns.stage_hunk, { desc = 'git [s]tage hunk' })
       map('n', '<leader>hr', gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
       map('n', '<leader>hS', gitsigns.stage_buffer, { desc = 'git [S]tage buffer' })
@@ -52,7 +52,7 @@ return function()
       map('n', '<leader>hd', gitsigns.diffthis, { desc = 'git [d]iff against index' })
       map('n', '<leader>hD', function()
         gitsigns.diffthis '@'
-      end, { desc = 'git [D]iff against last commit' })
+      end, { desc = 'git [D]iff against last commit' }) --]]
       -- Toggles
       map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle git show [b]lame line' })
       map('n', '<leader>tD', gitsigns.toggle_deleted, { desc = '[T]oggle git show [D]eleted' })
