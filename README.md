@@ -131,7 +131,7 @@ Alternatively you can run the setup script (only works on Arch), which will set 
 ![image](https://github.com/user-attachments/assets/811c37d3-742d-44e2-9638-b81f4752aa8b)
 
 - **Neovim**
-![image](https://github.com/user-attachments/assets/fcf77a65-aa23-4f7d-8c71-fcc6c73bf2fd)
+![image](https://github.com/user-attachments/assets/4ad776dd-b174-4e01-910f-b571141b38db)
 
 - **Desktop and Wofi**
 ![image](https://github.com/user-attachments/assets/157aad80-2b0c-4c0e-94df-9c4d263fe1d3)
