@@ -1,4 +1,4 @@
-return {
+return { -- Terminal inside nvim
   'akinsho/toggleterm.nvim',
   version = '*',
   config = function()

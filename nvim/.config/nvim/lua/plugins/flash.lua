@@ -1,4 +1,4 @@
-return {
+return { -- Move as fast as flash ;)
   'folke/flash.nvim',
   event = 'VeryLazy',
   config = function()

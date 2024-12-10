@@ -1,4 +1,4 @@
-return {
+return { -- Harpoon (teleport to defined files)
   'ThePrimeagen/harpoon',
   branch = 'harpoon2',
   dependencies = { 'nvim-lua/plenary.nvim' },

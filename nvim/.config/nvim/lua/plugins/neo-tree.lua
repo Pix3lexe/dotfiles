@@ -1,4 +1,4 @@
-return {
+return { -- File tree view
   'nvim-neo-tree/neo-tree.nvim',
   version = '*',
   dependencies = {

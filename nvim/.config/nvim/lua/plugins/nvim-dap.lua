@@ -1,4 +1,4 @@
-return {
+return { -- Debugging
   'mfussenegger/nvim-dap',
   dependencies = {
     -- Creates a beautiful debugger UI

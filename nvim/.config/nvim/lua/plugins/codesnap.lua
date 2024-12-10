@@ -1,4 +1,4 @@
-return {
+return { -- Take cool code screenshots
   'mistricky/codesnap.nvim',
   build = 'make',
   keys = {

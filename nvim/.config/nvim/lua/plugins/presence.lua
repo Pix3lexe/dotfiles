@@ -1,4 +1,4 @@
-return {
+return { -- Discord status
   'andweeb/presence.nvim',
   event = 'VimEnter',
   config = function()

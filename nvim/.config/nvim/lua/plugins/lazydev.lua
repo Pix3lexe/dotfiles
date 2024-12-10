@@ -1,4 +1,4 @@
-return {
+return { -- LSP related plugin
   'folke/lazydev.nvim',
   ft = 'lua',
   opts = {

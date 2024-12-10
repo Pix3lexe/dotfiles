@@ -1,5 +1,6 @@
-return {
+return { -- Best theme ever created ;)
   'catppuccin/nvim',
+  lazy = false,
   name = 'catppuccin',
   priority = 1000,
   config = function()

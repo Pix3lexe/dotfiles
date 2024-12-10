@@ -1,4 +1,4 @@
-return {
+return { -- Collection of small plugins (eg dashboard)
   'folke/snacks.nvim',
   config = function()
     require('snacks').setup {

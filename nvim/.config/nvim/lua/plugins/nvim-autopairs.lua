@@ -1,4 +1,4 @@
-return {
+return { -- Automatically add pairs like () or {}
   'windwp/nvim-autopairs',
   event = 'InsertEnter',
   -- Optional dependency
