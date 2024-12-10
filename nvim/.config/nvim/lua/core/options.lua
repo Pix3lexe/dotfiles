@@ -27,3 +27,12 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
+
+-- Default indentation settings
+vim.opt.tabstop = 4 -- Number of spaces tabs count for
+vim.opt.shiftwidth = 4 -- Number of spaces for indentation
+vim.opt.softtabstop = 4 -- Spaces per Tab press in insert mode
+vim.opt.expandtab = true -- Convert tabs to spaces
+vim.opt.smarttab = true -- Use `shiftwidth` for Tab/BS in insert mode
+vim.opt.autoindent = true -- Maintain indentation in new lines
+vim.opt.smartindent = true -- Add indentation for C-like syntax
