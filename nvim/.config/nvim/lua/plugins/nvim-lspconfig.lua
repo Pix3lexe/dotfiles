@@ -11,8 +11,20 @@ return { -- Main LSP plugin
 
     -- Allows extra capabilities provided by nvim-cmp
     'hrsh7th/cmp-nvim-lsp',
+
+    -- Function signature plugin
+    'ray-x/lsp_signature.nvim',
   },
   config = function()
+    -- setup for lsp_signature
+    local lsp_signature = require 'lsp_signature'
+    lsp_signature.setup {
+      bind = true,
+      floating_window = true,
+      hint_enable = true,
+      hi_parameter = 'IncSearch',
+    }
+
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
