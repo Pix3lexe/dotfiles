@@ -1,0 +1,22 @@
+[user]
+	name = Simon Hermanns
+	email = hermanns.simon@gmail.com
+[core]
+    autocrlf = input
+    pager = delta
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+    required = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    dark = true
+    syntax-theme = "Catppuccin Mocha"
+
+[merge]
+    conflictstyle = zdiff3
