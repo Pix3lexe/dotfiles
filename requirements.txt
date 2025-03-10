@@ -1,4 +1,17 @@
 # Core dependencies
+base-devel
+git
+neovim
+tmux
+curl
+lazygit
+zsh
+fzf
+kitty
+zoxide
+ninja
+stow
+ttf-jetbrains-mono-nerd
 hyprland
 wofi
 waybar
@@ -10,6 +23,7 @@ hyprpaper
 nwg-look
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
+
 
 # AUR dependencies
 hyprshot
