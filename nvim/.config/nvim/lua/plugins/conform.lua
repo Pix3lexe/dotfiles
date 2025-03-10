@@ -31,14 +31,22 @@ return { -- Autoformat
           lsp_format = lsp_format_opt,
         }
       end,
+      formatters = {
+        fprettify = {
+          prepend_args = { '-i', '2' },
+        },
+      },
       formatters_by_ft = {
         lua = { 'stylua' },
         cpp = { 'clang-format' },
         -- Conform can also run multiple formatters sequentially
         python = { 'black' },
-        html = { 'prettier' },
+        -- html = { 'prettier' },
+        -- htmldjango = { 'prettier' },
         javascript = { 'prettier' },
         css = { 'prettier' },
+        fortran = { 'fprettify' },
+        markdown = { 'prettier' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },

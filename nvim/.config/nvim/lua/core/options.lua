@@ -36,3 +36,6 @@ vim.opt.expandtab = true -- Convert tabs to spaces
 vim.opt.smarttab = true -- Use `shiftwidth` for Tab/BS in insert mode
 vim.opt.autoindent = true -- Maintain indentation in new lines
 vim.opt.smartindent = true -- Add indentation for C-like syntax
+
+-- Paths
+vim.g.mkdp_browser = '/usr/bin/zen-browser'

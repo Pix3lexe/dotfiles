@@ -3,6 +3,9 @@
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
   "modules-right": ["tray", "network", "pulseaudio", "battery", "clock", "custom/notification", "custom/power_off"],
+  "tray": {
+    "icon-size": 16
+  },
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
