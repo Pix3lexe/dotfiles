@@ -1,6 +1,6 @@
 # Pix3lexe dotfiles
 
-Welcome to my dotfiles repository! This repository contains the configuration files (dotfiles) I use to set up and customize my development environment. These dotfiles are modular and managed using **GNU Stow** for easy deployment.
+Welcome to my legendary dotfiles repository! The setup script is designed for arch but everything can be installed on basically every linux distro if you do it manually. Have fun ^^
 
 ---
 
@@ -21,6 +21,7 @@ Welcome to my dotfiles repository! This repository contains the configuration fi
 Dotfiles are configuration files for various programs and tools, often starting with a dot (`.`). This repository:
 
 - Provides a backup of my preferred environment setup.
+- Designed for Linux-based systems (tested on Arch Linux).
 - Allows quick deployment across systems.
 - Uses **GNU Stow**.
 
@@ -34,8 +35,6 @@ Dotfiles are configuration files for various programs and tools, often starting 
   - **Tmux** (`tmux`)
   - **Yazi** (`yazi`)
   - **Kitty** (terminal emulator)
-- Designed for Linux-based systems (tested on Arch Linux).
-- Compatible with **GNU Stow** for simple symlink creation.
 - Easily customizable and extendable.
 
 ---
@@ -53,10 +52,12 @@ Dotfiles are configuration files for various programs and tools, often starting 
    ```bash
    ./setup.sh
    ```
+   - **✏️Note**: If you only want to have a specific config look up [Usage](#usage)
+   - **⚠️Warning**: This script does not guarantee that every optional dependency is installed (eg. a latex compiler so that vimtex works). Install them by yourself if you need them.
 
 ### 🛠️ **Hyprland Dependencies**
 
-Before using these dotfiles, make sure the following dependencies are installed (these are specific to the Hyprland-based environment and related tools).<br>
+Before using these dotfiles, make sure the following dependencies are installed if you're using Hyprland (these are specific to the Hyprland-based environment and related tools) or just run the [setup script](#installation).<br>
 
 - **hyprland**: Window manager for Wayland.
 - **wofi**: Application launcher.
@@ -96,7 +97,7 @@ Each directory contains the relevant files, arranged in the same structure as th
 
 ## 🚀 **Usage** <a name="usage"></a>
 
-### Stow Specific Configurations
+### Apply Specific Configurations
 
 To only stow (deploy) a specific configuration (eg. nvim):
 
@@ -104,9 +105,9 @@ To only stow (deploy) a specific configuration (eg. nvim):
 stow -t ~ nvim
 ```
 
-### Unstow Configurations
+### Remove Specific Configurations
 
-To remove the symlinks created by Stow (example):
+To remove a symlink created by Stow (eg. nvim):
 
 ```bash
 stow -D -t ~ nvim
