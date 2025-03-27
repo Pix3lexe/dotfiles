@@ -41,8 +41,7 @@ return { -- Autoformat
         cpp = { 'clang-format' },
         -- Conform can also run multiple formatters sequentially
         python = { 'black' },
-        -- html = { 'prettier' },
-        -- htmldjango = { 'prettier' },
+        html = { 'prettier' },
         javascript = { 'prettier' },
         css = { 'prettier' },
         fortran = { 'fprettify' },

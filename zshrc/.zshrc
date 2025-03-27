@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/packages/icat:$HOME/projects/cpp/petrack/build:$HOME/packages/pfetch"
+export PATH="$PATH:$HOME/.local/bin"
 # pfetch
 # cowsay -r $(fortune)
 # fortune | chara say -r | lolcat
@@ -92,6 +92,7 @@ export EDITOR="nvim"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 _fix_cursor(){
     echo -ne '\e[3 q'
