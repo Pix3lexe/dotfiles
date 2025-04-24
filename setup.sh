@@ -11,7 +11,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # stow the directories
 echo "Stowing directories..."
-for dir in $(find . -maxdepth 1 -mindepth 1 -type d ! -name ".git" ! -name ".github"); do
+for dir in $(find . -maxdepth 1 -mindepth 1 -type d ! -name ".git" ! -name ".github" ! - name "git"); do
     dir_name=$(basename "$dir")
     echo "Stowing $dir_name..."
     stow -t ~ "$dir_name"
