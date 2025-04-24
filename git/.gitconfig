@@ -1,17 +1,28 @@
 [user]
-	name = Simon Hermanns
-	email = hermanns.simon@gmail.com
+    name = Simon Hermanns
+    email = hermanns.simon@gmail.com
+
+[includeIf "gitdir:~/projects/private/"]
+    path = ~/.gitconfig-github
+
+[includeIf "gitdir:~/projects/fh/"]
+    path = ~/.gitconfig-gitlab-fh
+
+[includeIf "gitdir:~/projects/fz/"]
+    path = ~/.gitconfig-gitlab-fz
+
+[credential]
+    helper = store
+
 [core]
     autocrlf = input
     pager = delta
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge --skip -- %f
 	process = git-lfs filter-process --skip
     required = true
-
-[interactive]
-    diffFilter = delta --color-only
 
 [delta]
     navigate = true
