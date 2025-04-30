@@ -1,50 +1,215 @@
 {
-  "position": "top",
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["tray", "network", "pulseaudio", "battery", "clock", "custom/notification", "custom/power_off"],
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "mode": "dock",
+  "reload_style_on_change": true,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  // "height": 40, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  // "spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": ["hyprland/workspaces", "hyprland/window", "keyboard-state"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "custom/notification",
+    "tray",
+  ],
+  // Modules configuration
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "warp-on-scroll": false,
+    "format": "{icon}{windows}",
+    "format-window-separator": " ",
+    "window-rewrite-default": "  ",
+    "window-rewrite": {
+      "title<.*youtube.*>": "  ",
+      "title<.*amazon.*>": "  ",
+      "title<.*reddit.*>": "  ",
+      "title<.*github.*>": "  ",
+      "title<.*gitlab.*>": "  ",
+      "title<.*jugit.*>": "  ",
+      "title<.*git.fh-aachen.*>": "  ",
+      "title<.*Picture-in-Picture.*>": "  ",
+      "class<firefox>": "  ",
+      "class<zen>": "  ",
+      "class<kitty>": "  ",
+      "class<konsole>": "  ",
+      "class<thunar>": " 󰝰 ",
+      "class<discord>": "  ",
+      "class<subl>": " 󰅳 ",
+      "class<celluloid>": "  ",
+      "class<Cider>": " 󰎆 ",
+      "class<code>": " 󰨞 ",
+      "class<dev.zed.Zed-Preview>": "  ",
+      "class<spotify>": "  ",
+      "class<codeblocks>": " 󰅩 ",
+      "class<org.larusstone.qtspim>": "  ",
+      "class<libreoffice-writer>": "  ",
+      "class<libreoffice-startcenter>": " 󰏆 ",
+      "class<mpv>": "  ",
+    },
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "separate-outputs": true,
+  },
+  "keyboard-state": {
+    "capslock": true,
+    "format": "󰪛 {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": "",
+    },
+  },
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>",
+  },
+  "sway/scratchpad": {
+    "format": "{icon} {count}",
+    "show-empty": false,
+    "format-icons": ["", ""],
+    "tooltip": true,
+    "tooltip-format": "{app}: {title}",
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
+    },
+  },
   "tray": {
-    "icon-size": 16
+    "icon-size": 15,
+    "spacing": 10,
   },
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    // "timezone": "America/New_York",
+    "format": "󰣇 {:%H:%M}",
+    "format-alt": "{:%A  |  %H:%M  | %e %B}",
+    "on-scroll-up": "pamixer -i 2 --allow-boost=true --set-limit=100",
+    "on-scroll-down": "pamixer -d 2 --allow-boost=true --set-limit=100",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false,
+  },
+  "memory": {
+    "format": "{}% ",
+  },
+  "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": [" ", "", " "],
+  },
+  "backlight": {
+    "device": "amdgpu_bl2",
+    "format": "{percent}%  {icon} ",
+    "format-icons": ["󰛩", "󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"],
+    "on-scroll-up": "brightnessctl --device=amdgpu_bl2 set 1%+",
+    "on-scroll-down": "brightnessctl --device=amdgpu_bl2 set 1%-",
+    "on-click": "brightnessctl --device-amdgpu_bl2 set 50",
+    "min-length": 6,
+    "scroll-step": 0.5,
+    "reverse-scrolling": true,
+    "tooltip": false,
   },
   "battery": {
+    "bat": "BAT0",
     "states": {
-      "warning": 30,
-      "critical": 15
+      "good": 85,
+      "warning": 40,
+      "critical": 20,
     },
-    "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
-    "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
-    "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
-    "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
-    "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-plugged": "{capacity}% 󰚥",
+    "format-alt": "{power:0.1f}W {icon}",
+    "tooltip": false,
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
     "format-icons": ["", "", "", "", ""],
-    "tooltip-format": "{time}"
+    // "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'> </span>",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "interval": 2,
+    "format-wifi": " {bandwidthDownBits}",
+    "format-ethernet": "󰈀  Ethernet",
+    "tooltip": false,
+    "format-linked": "󰤭  {ifname} | No IP",
+    "format-disconnected": "󰤭  Disconnected",
+    "format-alt": "{icon} {essid}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "on-click-right": "nm-connection-editor",
   },
   "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-muted": "",
-      "format-icons": {
-          "default": ["", "", " "]
-      },
-      "on-click": "pavucontrol"
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-bluetooth-muted": "󰟎   Mute",
+    "format-muted": "󰝟  Mute",
+    "format-icons": {
+      "headphone": "󰋋 ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": ["󰕿", "󰖀", "󰖀", "󰕾"],
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+    "reverse-scrolling": true,
+    "scroll-step": 0.5,
   },
-  "custom/power_off": {
-    "format": "<span size='13000' foreground='#f38ba8'> </span>",
-    "tooltip": "Power Off",
-    "on-click": "systemctl poweroff",  // Shutdown
-    "on-right-click": "systemctl reboot"  // Reboot
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "  {volume}%",
+    "format-source-muted": "",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 2",
+    "on-scroll-down": "pamixer --default-source -d 2",
+    "scroll-step": 2,
+    "tooltip": false,
+  },
+  "custom/weather": {
+    // shows the current weather and forecast
+    "tooltip": true,
+    "format": "{}",
+    "interval": 30,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json",
+  },
+
+  "custom/vpn": {
+    "format": "VPN ",
+    "exec": "echo '{\"class\": \"connected\"}'",
+    "exec-if": "test -d /proc/sys/net/ipv4/conf/tun0",
+    "return-type": "json",
+    "interval": 5,
+  },
+  "custom/cpu": {
+    "exec": "$HOME/.config/waybar/scripts/monitoring/cpu-temp",
+    "format": "<span foreground='#d79921'>  </span>{}",
+    "tooltip": false,
+  },
+
+  "custom/gpu": {
+    "exec": "$HOME/.config/waybar/scripts/monitoring/gpu-temp",
+    "format": "<span foreground='#d79921'>  </span>{}",
+    "tooltip": false,
   },
   "custom/notification": {
     "tooltip": false,
@@ -52,18 +217,18 @@
     "format-icons": {
       "notification": " <span foreground='#f38ba8'><sup></sup></span>",
       "none": " ",
-      "dnd-notification": " <span foreground='red'> <sup></sup></span>",
+      "dnd-notification": " <span foreground='#f9e2af'><sup></sup></span>",
       "dnd-none": " ",
-      "inhibited-notification": " <span foreground='red'> <sup></sup></span>",
+      "inhibited-notification": " <span foreground='#f5c2e7'><sup></sup></span>",
       "inhibited-none": " ",
-      "dnd-inhibited-notification": " <span foreground='red'> <sup></sup></span>",
-      "dnd-inhibited-none": " "
+      "dnd-inhibited-notification": " <span foreground='#cba6f7'><sup></sup></span>",
+      "dnd-inhibited-none": " ",
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  }
+    "escape": true,
+  },
 }
