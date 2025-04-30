@@ -63,7 +63,7 @@
     "capslock": true,
     "format": "󰪛 {icon}",
     "format-icons": {
-      "locked": "",
+      "locked": "<span foreground='#f38ba8'></span>",
       "unlocked": "",
     },
   },
