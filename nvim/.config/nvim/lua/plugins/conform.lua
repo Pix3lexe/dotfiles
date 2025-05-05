@@ -42,6 +42,7 @@ return { -- Autoformat
         -- Conform can also run multiple formatters sequentially
         python = { 'black' },
         html = { 'prettier' },
+        jsonc = { 'prettier' },
         javascript = { 'prettier' },
         css = { 'prettier' },
         fortran = { 'fprettify' },

@@ -2,7 +2,7 @@
     name = Simon Hermanns
     email = hermanns.simon@gmail.com
 
-[includeIf "gitdir:~/projects/private/"]
+[includeIf "gitdir:~/projects/personal/"]
     path = ~/.gitconfig-github
 
 [includeIf "gitdir:~/projects/fh/"]
