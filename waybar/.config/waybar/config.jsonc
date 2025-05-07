@@ -13,6 +13,7 @@
   "modules-left": ["hyprland/workspaces", "hyprland/window", "keyboard-state"],
   "modules-center": ["clock"],
   "modules-right": [
+    "custom/theme-switcher",
     "cpu",
     "memory",
     "network",
@@ -190,9 +191,11 @@
     "format": "{}",
     "interval": 30,
     "exec": "~/.config/waybar/scripts/waybar-wttr.py",
-    "return-type": "json",
   },
-
+  "custom/theme-switcher": {
+    "format": "",
+    "on-click": "eww open wallpaper-chooser",
+  },
   "custom/vpn": {
     "format": "VPN ",
     "exec": "echo '{\"class\": \"connected\"}'",

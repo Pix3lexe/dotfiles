@@ -1,6 +1,6 @@
 @import "mocha.css";
 
-@define-color flavour @lavender;
+@define-color flavour @flamingo;
 
 * {
   border: none;
@@ -74,6 +74,7 @@ tooltip {
   border-color: transparent;
 }
 
+#custom-theme-switcher,
 #custom-power_profile,
 #custom-weather,
 #custom-vpn,
@@ -142,6 +143,12 @@ tooltip {
   padding-right: 0px;
   padding-left: 5px;
   border: 2px solid @subtext0;
+}
+
+#custom-theme-switcher {
+  margin-right: 5px;
+  border-radius: 20px;
+  border: 2px solid @flavour;
 }
 
 #custom-power_profile {

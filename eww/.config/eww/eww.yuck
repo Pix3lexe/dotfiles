@@ -22,7 +22,7 @@
       :visible {!show_flavours}
       :class "edit-button"
       :onclick "eww update show_flavours=true"
-      "✎")
+      "")
     (button
       :visible {show_flavours}
       :class "back-button"
@@ -105,6 +105,7 @@
 
 (defwindow wallpaper-chooser
   :monitor 0
+  :focusable false
   :geometry (geometry
               :x "0px"
               :y "0px"
