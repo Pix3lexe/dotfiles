@@ -1,0 +1,54 @@
+;; ~/.config/eww/eww.yuck
+(deflisten grid :initial "[]"
+  ;;`find /home/simon/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs]'`)
+  `find /home/simon/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | [_nwise(4)]'`)
+
+(defvar wallpaper_script "/home/simon/.config/eww/scripts/eww_wallpaper_changer.sh")
+
+(defwidget header []
+  (box
+    :class "header"
+    :space-evenly false
+    :halign "fill"
+    :hexpand true
+    :valign "center"
+    (button
+      :class "close-button"
+      :onclick "eww close wallpaper-chooser"
+      "✕")))
+
+(defwidget wallpaper-grid []
+  (box
+    :class "wallpaper-grid-container"
+    :orientation "v"
+    :space-evenly false
+    (header)
+    (box
+      :class "wallpaper-grid"
+      :orientation "v"
+      (for row in {grid}
+        (box
+          :class "wallpaper-row"
+          :orientation "h"
+          (for path in {row}
+            (button
+              :class "wallpaper-button"
+              :onclick "${wallpaper_script} ${path}"
+              (image
+                :class "wallpaper-image"
+                :path path
+                :image-width 160
+                :image-height 120))))))))
+
+(defwindow wallpaper-chooser
+  :monitor 0
+  :geometry (geometry
+              :x "0px"
+              :y "0px"
+              :width "800px"
+              :height "600px"
+              :anchor "center")
+  (scroll
+    :vscroll true
+    :vexpand true
+    (wallpaper-grid)))

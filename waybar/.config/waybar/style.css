@@ -1,4 +1,7 @@
 @import "mocha.css";
+
+@define-color flavour @lavender;
+
 * {
   border: none;
   border-radius: 0px;
@@ -13,7 +16,7 @@
 
 window#waybar {
   background-color: transparent;
-  color: @mauve;
+  color: @flavour;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -31,7 +34,7 @@ tooltip {
   border-radius: 10px;
   border-width: 1.5px;
   border-style: solid;
-  border-color: @mauve;
+  border-color: @flavour;
   transition: 0.1s;
   opacity: 0.9;
 }
@@ -43,7 +46,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  color: @mauve;
+  color: @flavour;
   background: @surface0;
   border-radius: 20px;
 }
@@ -150,68 +153,68 @@ tooltip {
 #window {
   margin-left: 5px;
   border-radius: 20px 0 0 20px;
-  border-left: 2px solid @mauve;
-  border-right: 2px solid @mauve;
-  border-bottom: 2px solid @mauve;
-  border-top: 2px solid @mauve;
+  border-left: 2px solid @flavour;
+  border-right: 2px solid @flavour;
+  border-bottom: 2px solid @flavour;
+  border-top: 2px solid @flavour;
 }
 #keyboard-state {
   margin-right: 5px;
   border-radius: 0 20px 20px 0;
-  border-right: 2px solid @mauve;
-  border-bottom: 2px solid @mauve;
-  border-top: 2px solid @mauve;
+  border-right: 2px solid @flavour;
+  border-bottom: 2px solid @flavour;
+  border-top: 2px solid @flavour;
 }
 
 window#waybar.empty #keyboard-state {
   border-radius: 20px;
-  border: 2px solid @mauve;
+  border: 2px solid @flavour;
 }
 
 #clock {
-  color: @mauve;
+  color: @flavour;
   border-radius: 20px;
   margin-left: 5px;
   border-right: 0px;
   transition: 0.1s;
   padding-right: 13px;
   padding-left: 13px;
-  border: 2px solid @mauve;
+  border: 2px solid @flavour;
 }
 
 #network {
-  color: @mauve;
+  color: @flavour;
   border-radius: 20px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: 5px;
-  border: 2px solid @mauve;
+  border: 2px solid @flavour;
 }
 
 #cpu {
   border-radius: 20px 0 0 20px;
-  border-left: 2px solid @mauve;
-  border-bottom: 2px solid @mauve;
-  border-top: 2px solid @mauve;
+  border-left: 2px solid @flavour;
+  border-bottom: 2px solid @flavour;
+  border-top: 2px solid @flavour;
 }
 #memory {
   border-radius: 0 20px 20px 0;
-  border-right: 2px solid @mauve;
-  border-bottom: 2px solid @mauve;
-  border-top: 2px solid @mauve;
+  border-right: 2px solid @flavour;
+  border-bottom: 2px solid @flavour;
+  border-top: 2px solid @flavour;
   margin-right: 5px;
 }
 
 #network.disconnected {
   color: @pink;
-  border-left: 2px solid @mauve;
-  border-top: 2px solid @mauve;
+  border-left: 2px solid @flavour;
+  border-top: 2px solid @flavour;
   border-right: 0px;
-  border-bottom: 2px solid @mauve;
+  border-bottom: 2px solid @flavour;
 }
 
 #bluetooth {
-  color: @mauve;
+  color: @flavour;
   border-radius: 20px;
   margin-right: 10px;
 }
@@ -235,7 +238,7 @@ window#waybar.empty #keyboard-state {
 }
 
 #pulseaudio.microphone {
-  color: @mauve;
+  color: @flavour;
   border-radius: 20px 0px 0px 20px;
   border-left: 2px solid @blue;
   border-top: 2px solid @blue;
@@ -254,25 +257,25 @@ window#waybar.empty #keyboard-state {
   margin-right: 5px;
   padding-right: 15px;
   border-left: 0px;
-  border-top: 2px solid @mauve;
-  border-right: 2px solid @mauve;
-  border-bottom: 2px solid @mauve;
+  border-top: 2px solid @flavour;
+  border-right: 2px solid @flavour;
+  border-bottom: 2px solid @flavour;
 }
 
 #battery.good {
-  color: @mauve;
+  color: @flavour;
   border-left: 0px;
-  border-top: 2px solid @mauve;
-  border-right: 2px solid @mauve;
-  border-bottom: 2px solid @mauve;
+  border-top: 2px solid @flavour;
+  border-right: 2px solid @flavour;
+  border-bottom: 2px solid @flavour;
 }
 
 #battery.warning {
   color: @red;
   border-left: 0px;
-  border-top: 2px solid @mauve;
-  border-right: 2px solid @mauve;
-  border-bottom: 2px solid @mauve;
+  border-top: 2px solid @flavour;
+  border-right: 2px solid @flavour;
+  border-bottom: 2px solid @flavour;
 }
 
 #battery.charging {
@@ -282,9 +285,9 @@ window#waybar.empty #keyboard-state {
 #battery.critical {
   color: @red;
   border-left: 0px;
-  border-top: 2px solid @mauve;
-  border-right: 2px solid @mauve;
-  border-bottom: 2px solid @mauve;
+  border-top: 2px solid @flavour;
+  border-right: 2px solid @flavour;
+  border-bottom: 2px solid @flavour;
 }
 
 #custom-weather {
