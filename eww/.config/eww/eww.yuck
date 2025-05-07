@@ -99,7 +99,10 @@
     :space-evenly false
     (header)
     (flavour-grid)
-    (wallpaper-grid)))
+    (scroll
+      :vscroll true
+      :vexpand true
+      (wallpaper-grid))))
 
 
 (defwindow wallpaper-chooser
@@ -111,7 +114,4 @@
               :width "800px"
               :height "600px"
               :anchor "center")
-  (scroll
-    :vscroll true
-    :vexpand true
-    (wallpaper-grid-container)))
+  (wallpaper-grid-container))
