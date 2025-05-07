@@ -1,10 +1,9 @@
 ;; ~/.config/eww/eww.yuck
 (deflisten grid :initial "[]"
-  ;;`find /home/simon/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs]'`)
-  `find /home/simon/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | [_nwise(4)]'`)
+  `find $HOME/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | [_nwise(4)]'`)
 
-(defvar wallpaper_script "/home/simon/.config/eww/scripts/eww_wallpaper_changer.sh")
-(defvar flavour_script "/home/simon/.config/eww/scripts/flavour_changer.sh")
+(defvar wallpaper_script "$HOME/.config/eww/scripts/eww_wallpaper_changer.sh")
+(defvar flavour_script "$HOME/.config/eww/scripts/flavour_changer.sh")
 (defvar show_flavours false)
 
 (defwidget header []
