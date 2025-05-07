@@ -1,3 +1,9 @@
+*{
+    font-family: "JetBrains Mono Nerd Font";
+    font-weight: bold;
+}
+.edit-button,
+.back-button,
 .close-button {
     background: transparent;
     border: none;
@@ -5,8 +11,16 @@
     font-size: 16px;
 }
 
-.close-button:hover {
-    color: #ff5555;
+.close-button{
+    color: #f48ba8;
+}
+
+.edit-button{
+    color: #89b4fa;
+}
+
+.back-button{
+    color: #a6e3a1;
 }
 
 .wallpaper-image {
@@ -24,4 +38,37 @@
 .wallpaper-row{
     padding: 0;
     margin: 0;
+}
+
+.flavour-button{
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.flavour-button.flavour-mauve{
+    background-color: #cba6f7;
+}
+
+.flavour-button.flavour-lavender{
+    background-color: #b4befe;
+}
+
+.flavour-button.flavour-flamingo{
+    background-color: #f2cdcd;
+}
+
+.flavour-button.flavour-teal{
+    background-color: #94e2d5;
+}
+
+.flavour-button.flavour-pink{
+    background-color: #f5c2e7;
+}
+
+.flavour-button.flavour-sky{
+    background-color: #89dceb;
+}
+
+.flavour-button.flavour-maroon{
+    background-color: #eba0ac;
 }

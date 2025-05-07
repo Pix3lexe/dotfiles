@@ -4,6 +4,8 @@
   `find /home/simon/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | [_nwise(4)]'`)
 
 (defvar wallpaper_script "/home/simon/.config/eww/scripts/eww_wallpaper_changer.sh")
+(defvar flavour_script "/home/simon/.config/eww/scripts/flavour_changer.sh")
+(defvar show_flavours false)
 
 (defwidget header []
   (box
@@ -15,15 +17,66 @@
     (button
       :class "close-button"
       :onclick "eww close wallpaper-chooser"
-      "✕")))
+      "✕")
+    (button
+      :visible {!show_flavours}
+      :class "edit-button"
+      :onclick "eww update show_flavours=true"
+      "✎")
+    (button
+      :visible {show_flavours}
+      :class "back-button"
+      :onclick "eww update show_flavours=false"
+      "󰸉")
+  )
+)
+
+(defwidget flavour-grid []
+  (box
+    :visible {show_flavours}
+    :class "flavour-grid"
+    :orientation "v"
+    :spacing 10
+    (box
+      :class "flavour-row"
+      :orientation "h"
+      :spacing 8
+      (button
+        :class "flavour-button flavour-mauve"
+        :onclick "${flavour_script} --mauve"
+        "Mauve")
+      (button
+        :class "flavour-button flavour-lavender"
+        :onclick "${flavour_script} --lavender"
+        "Lavender")
+      (button
+        :class "flavour-button flavour-flamingo"
+        :onclick "${flavour_script} --flamingo"
+        "Flamingo"))
+    (box
+      :class "flavour-row"
+      :orientation "h"
+      :spacing 8
+      (button
+        :class "flavour-button flavour-teal"
+        :onclick "${flavour_script} --teal"
+        "Teal")
+      (button
+        :class "flavour-button flavour-pink"
+        :onclick "${flavour_script} --pink"
+        "Pink")
+      (button
+        :class "flavour-button flavour-sky"
+        :onclick "${flavour_script} --sky"
+        "Sky")
+      (button
+        :class "flavour-button flavour-maroon"
+        :onclick "${flavour_script} --maroon"
+        "Maroon"))))
 
 (defwidget wallpaper-grid []
-  (box
-    :class "wallpaper-grid-container"
-    :orientation "v"
-    :space-evenly false
-    (header)
     (box
+      :visible {!show_flavours}
       :class "wallpaper-grid"
       :orientation "v"
       (for row in {grid}
@@ -38,7 +91,17 @@
                 :class "wallpaper-image"
                 :path path
                 :image-width 160
-                :image-height 120))))))))
+                :image-height 120)))))))
+
+(defwidget wallpaper-grid-container []
+  (box
+    :class "wallpaper-grid-container"
+    :orientation "v"
+    :space-evenly false
+    (header)
+    (flavour-grid)
+    (wallpaper-grid)))
+
 
 (defwindow wallpaper-chooser
   :monitor 0
@@ -51,4 +114,4 @@
   (scroll
     :vscroll true
     :vexpand true
-    (wallpaper-grid)))
+    (wallpaper-grid-container)))

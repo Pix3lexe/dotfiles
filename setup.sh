@@ -17,6 +17,10 @@ for dir in $(find . -maxdepth 1 -mindepth 1 -type d ! -name ".git" ! -name ".git
     stow -t ~ "$dir_name"
 done
 
+git submodule init
+git submodule update
+~/.config/eww/scripts/thumbnail_generator.sh
+
 # after that (if youre using gnome only!) install the following extensions: AppIndicator and KStatusNotifierItem Support, Blur my Shell, Coverflow Alt-Tab, Dash to Dock, [QSTweak] Quick Setting Tweaker, Unblank lock screen, User Themes
 # Install the theme: Layan-Dark
 # Install Sweet-cursors and Deepin2022-Dark icons
