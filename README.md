@@ -118,14 +118,14 @@ stow -D -t ~ nvim
 ## 📸 **Screenshots** <a name="screenshots"></a>
 
 - **Terminal**
-  ![image](https://github.com/user-attachments/assets/811c37d3-742d-44e2-9638-b81f4752aa8b)
+  ![image](https://github.com/user-attachments/assets/65dcd04e-35eb-4f9e-9f2c-d2994643eec4)
 
 - **Neovim**
-  ![image](https://github.com/user-attachments/assets/4ad776dd-b174-4e01-910f-b571141b38db)
-  ![image](https://github.com/user-attachments/assets/3cb28528-bb3d-4ca8-9b55-ac615cf77c89)
+  ![image](https://github.com/user-attachments/assets/2bde98b8-966d-4b7c-b1fb-b62583892ffd)
+  ![image](https://github.com/user-attachments/assets/83cd8055-9bfa-49b4-bab6-9ac464c8e751)
 
 - **Desktop and Wofi**
-  ![image](https://github.com/user-attachments/assets/157aad80-2b0c-4c0e-94df-9c4d263fe1d3)
+  ![image](https://github.com/user-attachments/assets/063218e1-cad4-4fde-ae42-7640efc7dcc8)
 
 ---
 
