@@ -15,7 +15,7 @@
   "modules-right": [
     "custom/theme-switcher",
     "cpu",
-    "memory",
+    "memory", // insert battery module after memory if you have a battery (also look in style.css)
     "network",
     "pulseaudio",
     "custom/notification",

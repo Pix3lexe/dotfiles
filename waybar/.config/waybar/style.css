@@ -1,6 +1,6 @@
 @import "mocha.css";
 
-@define-color flavour @mauve;
+@define-color flavour @flamingo;
 
 * {
   border: none;
@@ -208,6 +208,9 @@ window#waybar.empty #keyboard-state {
 #memory {
   border-bottom: 2px solid @theme;
   border-top: 2px solid @theme;
+  border-right: 2px solid @theme; /* remove those three lines if you have a battery */
+  border-radius: 0 20px 20px 0;
+  margin-right: 5px;
 }
 
 #battery {
