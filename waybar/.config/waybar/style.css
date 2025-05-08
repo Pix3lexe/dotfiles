@@ -1,6 +1,6 @@
 @import "mocha.css";
 
-@define-color flavour @flamingo;
+@define-color flavour @mauve;
 
 * {
   border: none;
@@ -204,12 +204,52 @@ window#waybar.empty #keyboard-state {
   border-bottom: 2px solid @flavour;
   border-top: 2px solid @flavour;
 }
+
 #memory {
+  border-bottom: 2px solid @theme;
+  border-top: 2px solid @theme;
+}
+
+#battery {
+  color: @green;
   border-radius: 0 20px 20px 0;
   border-right: 2px solid @flavour;
   border-bottom: 2px solid @flavour;
   border-top: 2px solid @flavour;
   margin-right: 5px;
+  padding-right: 15px;
+  border-left: 0px;
+  border-top: 2px solid @theme;
+  border-right: 2px solid @theme;
+  border-bottom: 2px solid @theme;
+}
+
+#battery.good {
+  color: @theme;
+  border-left: 0px;
+  border-top: 2px solid @theme;
+  border-right: 2px solid @theme;
+  border-bottom: 2px solid @theme;
+}
+
+#battery.warning {
+  color: @red;
+  border-left: 0px;
+  border-top: 2px solid @theme;
+  border-right: 2px solid @theme;
+  border-bottom: 2px solid @theme;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.critical {
+  color: @red;
+  border-left: 0px;
+  border-top: 2px solid @theme;
+  border-right: 2px solid @theme;
+  border-bottom: 2px solid @theme;
 }
 
 #network.disconnected {
