@@ -254,10 +254,6 @@ window#waybar.empty #keyboard-state {
 
 #network.disconnected {
   color: @pink;
-  border-left: 2px solid @flavour;
-  border-top: 2px solid @flavour;
-  border-right: 0px;
-  border-bottom: 2px solid @flavour;
 }
 
 #bluetooth {
