@@ -194,7 +194,7 @@
   },
   "custom/theme-switcher": {
     "format": "",
-    "on-click": "eww open wallpaper-chooser",
+    "on-click": "~/.config/eww/scripts/open_wallpaper_chooser.sh",
   },
   "custom/vpn": {
     "format": "VPN ",

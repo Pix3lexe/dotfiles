@@ -1,4 +1,3 @@
-;; ~/.config/eww/eww.yuck
 (deflisten grid :initial "[]"
   `find $HOME/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | [_nwise(4)]'`)
 
