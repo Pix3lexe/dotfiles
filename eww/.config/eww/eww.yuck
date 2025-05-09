@@ -1,6 +1,5 @@
 (deflisten grid :initial "[]"
   `find $HOME/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | [_nwise(4)]'`)
-
 (defvar wallpaper_script "$HOME/.config/eww/scripts/eww_wallpaper_changer.sh")
 (defvar flavour_script "$HOME/.config/eww/scripts/flavour_changer.sh")
 (defvar show_flavours false)
@@ -14,7 +13,7 @@
     :valign "center"
     (button
       :class "close-button"
-      :onclick "eww close wallpaper-chooser"
+      :onclick "eww close wallpaper-chooser && pkill eww" ; maybe find a better solution in the future but atm lingering processes seem to be a problem
       "✕")
     (button
       :visible {!show_flavours}
@@ -73,23 +72,23 @@
         "Maroon"))))
 
 (defwidget wallpaper-grid []
-    (box
-      :visible {!show_flavours}
-      :class "wallpaper-grid"
-      :orientation "v"
-      (for row in {grid}
-        (box
-          :class "wallpaper-row"
-          :orientation "h"
-          (for path in {row}
-            (button
-              :class "wallpaper-button"
-              :onclick "${wallpaper_script} ${path}"
-              (image
-                :class "wallpaper-image"
-                :path path
-                :image-width 160
-                :image-height 120)))))))
+  (box
+    :visible {!show_flavours}
+    :class "wallpaper-grid"
+    :orientation "v"
+    (for row in {grid}
+      (box
+        :class "wallpaper-row"
+        :orientation "h"
+        (for path in {row}
+          (button
+            :class "wallpaper-button"
+            :onclick "${wallpaper_script} ${path}"
+            (image
+              :class "wallpaper-image"
+              :path path
+              :image-width 160
+              :image-height 120)))))))
 
 (defwidget wallpaper-grid-container []
   (box
@@ -97,12 +96,15 @@
     :orientation "v"
     :space-evenly false
     (header)
-    (flavour-grid)
-    (scroll
-      :vscroll true
+    (box
+      :orientation "v"
       :vexpand true
-      (wallpaper-grid))))
-
+      (flavour-grid)
+      (scroll
+        :vscroll true
+        :vexpand true
+        :visible {!show_flavours}
+        (wallpaper-grid)))))
 
 (defwindow wallpaper-chooser
   :monitor 0
