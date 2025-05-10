@@ -11,11 +11,16 @@ if [ $# -gt 0 ]; then
     fi
 fi
 
-# 2. Replace the @define-color flavour @[CURRENT_FLAVOUR]; in ~/.config/waybar/style.css
+# 2. Replace the @define-color flavour @[CURRENT_FLAVOUR]; in ~/.config/waybar/style.css and ~/.config/wofi/style.css
 WAYBAR_CSS="$HOME/.config/waybar/style.css"
 if [ -f "$WAYBAR_CSS" ]; then
     # Replace any existing flavour definition with the new one
     sed -i "s/@define-color flavour @\([a-zA-Z]*\);/@define-color flavour @$FLAVOUR;/g" "$WAYBAR_CSS"
+fi
+
+WOFI_CSS="$HOME/.config/wofi/style.css"
+if [ -f "$WAYBAR_CSS" ]; then
+    sed -i "s/@define-color flavour @\([a-zA-Z]*\);/@define-color flavour @$FLAVOUR;/g" "$WOFI_CSS"
 fi
 
 # 3. Replace $accent = $[CURRENT_FLAVOUR] in ~/.config/hypr/hyprlock.conf
