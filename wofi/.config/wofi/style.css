@@ -51,7 +51,7 @@
 @define-color crust  #11111b;
 @define-color crust-rgb  rgb(17, 17, 27);
 
-@define-color flavour @flamingo;
+@define-color flavor @flamingo;
 
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
@@ -62,7 +62,7 @@
 window {
   margin: 0px;
   padding: 10px;
-  border: 2px solid @flavour;
+  border: 2px solid @flavor;
   border-radius: 8px;
   background-color: @base;
 }
@@ -123,12 +123,12 @@ window {
 
 #entry arrow {
   border: none;
-  color: @flavour;
+  color: @flavor;
 }
 
 /* Selected Entry */
 #entry:selected {
-  border: 0.11em solid @flavour;
+  border: 0.11em solid @flavor;
 }
 
 #entry:selected #text {
@@ -136,5 +136,5 @@ window {
 }
 
 #entry:drop(active) {
-  background-color: @flavour!important;
+  background-color: @flavor!important;
 }

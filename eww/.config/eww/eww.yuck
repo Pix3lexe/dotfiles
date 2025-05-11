@@ -1,8 +1,8 @@
 (deflisten grid :initial "[]"
   `find $HOME/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | [_nwise(4)]'`)
 (defvar wallpaper_script "$HOME/.config/eww/scripts/eww_wallpaper_changer.sh")
-(defvar flavour_script "$HOME/.config/eww/scripts/flavour_changer.sh")
-(defvar show_flavours false)
+(defvar flavor_script "$HOME/.config/eww/scripts/flavor_changer.sh")
+(defvar show_flavors false)
 
 (defwidget header []
   (box
@@ -16,64 +16,100 @@
       :onclick "eww close wallpaper-chooser && pkill eww" ; maybe find a better solution in the future but atm lingering processes seem to be a problem
       "✕")
     (button
-      :visible {!show_flavours}
+      :visible {!show_flavors}
       :class "edit-button"
-      :onclick "eww update show_flavours=true"
-      "")
+      :onclick "eww update show_flavors=true"
+      "󰏘")
     (button
-      :visible {show_flavours}
+      :visible {show_flavors}
       :class "back-button"
-      :onclick "eww update show_flavours=false"
+      :onclick "eww update show_flavors=false"
       "󰸉")
   )
 )
 
-(defwidget flavour-grid []
+(defwidget flavor-grid []
   (box
-    :visible {show_flavours}
-    :class "flavour-grid"
+    :visible {show_flavors}
+    :class "flavor-grid"
     :orientation "v"
     :spacing 10
     (box
-      :class "flavour-row"
+      :class "flavor-row"
       :orientation "h"
       :spacing 8
       (button
-        :class "flavour-button flavour-mauve"
-        :onclick "${flavour_script} --mauve"
+        :class "flavor-button flavor-blue"
+        :onclick "${flavor_script} --blue"
+        "Blue")
+      (button
+        :class "flavor-button flavor-flamingo"
+        :onclick "${flavor_script} --flamingo"
+        "Flamingo")
+      (button
+        :class "flavor-button flavor-green"
+        :onclick "${flavor_script} --green"
+        "Green")
+      (button
+        :class "flavor-button flavor-lavender"
+        :onclick "${flavor_script} --lavender"
+        "Lavender"))
+    (box
+      :class "flavor-row"
+      :orientation "h"
+      :spacing 8
+      (button
+        :class "flavor-button flavor-maroon"
+        :onclick "${flavor_script} --maroon"
+        "Maroon")
+      (button
+        :class "flavor-button flavor-mauve"
+        :onclick "${flavor_script} --mauve"
         "Mauve")
       (button
-        :class "flavour-button flavour-lavender"
-        :onclick "${flavour_script} --lavender"
-        "Lavender")
+        :class "flavor-button flavor-peach"
+        :onclick "${flavor_script} --peach"
+        "Peach")
       (button
-        :class "flavour-button flavour-flamingo"
-        :onclick "${flavour_script} --flamingo"
-        "Flamingo"))
+        :class "flavor-button flavor-pink"
+        :onclick "${flavor_script} --pink"
+        "Pink"))
     (box
-      :class "flavour-row"
+      :class "flavor-row"
       :orientation "h"
       :spacing 8
       (button
-        :class "flavour-button flavour-teal"
-        :onclick "${flavour_script} --teal"
+        :class "flavor-button flavor-red"
+        :onclick "${flavor_script} --red"
+        "Red")
+      (button
+        :class "flavor-button flavor-rosewater"
+        :onclick "${flavor_script} --rosewater"
+        "Rosewater")
+      (button
+        :class "flavor-button flavor-sapphire"
+        :onclick "${flavor_script} --sapphire"
+        "Sapphire")
+      (button
+        :class "flavor-button flavor-sky"
+        :onclick "${flavor_script} --sky"
+        "Sky"))
+    (box
+      :class "flavor-row"
+      :orientation "h"
+      :spacing 8
+      (button
+        :class "flavor-button flavor-teal"
+        :onclick "${flavor_script} --teal"
         "Teal")
       (button
-        :class "flavour-button flavour-pink"
-        :onclick "${flavour_script} --pink"
-        "Pink")
-      (button
-        :class "flavour-button flavour-sky"
-        :onclick "${flavour_script} --sky"
-        "Sky")
-      (button
-        :class "flavour-button flavour-maroon"
-        :onclick "${flavour_script} --maroon"
-        "Maroon"))))
+        :class "flavor-button flavor-yellow"
+        :onclick "${flavor_script} --yellow"
+        "Yellow"))))
 
 (defwidget wallpaper-grid []
   (box
-    :visible {!show_flavours}
+    :visible {!show_flavors}
     :class "wallpaper-grid"
     :orientation "v"
     (for row in {grid}
@@ -99,11 +135,11 @@
     (box
       :orientation "v"
       :vexpand true
-      (flavour-grid)
+      (flavor-grid)
       (scroll
         :vscroll true
         :vexpand true
-        :visible {!show_flavours}
+        :visible {!show_flavors}
         (wallpaper-grid)))))
 
 (defwindow wallpaper-chooser

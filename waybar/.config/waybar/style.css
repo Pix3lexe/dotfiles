@@ -1,6 +1,6 @@
 @import "mocha.css";
 
-@define-color flavour @flamingo;
+@define-color flavor @flamingo;
 
 * {
   border: none;
@@ -16,7 +16,7 @@
 
 window#waybar {
   background-color: transparent;
-  color: @flavour;
+  color: @flavor;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -34,7 +34,7 @@ tooltip {
   border-radius: 10px;
   border-width: 1.5px;
   border-style: solid;
-  border-color: @flavour;
+  border-color: @flavor;
   transition: 0.1s;
   opacity: 0.9;
 }
@@ -46,7 +46,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  color: @flavour;
+  color: @flavor;
   background: @surface0;
   border-radius: 20px;
 }
@@ -148,7 +148,7 @@ tooltip {
 #custom-theme-switcher {
   margin-right: 5px;
   border-radius: 20px;
-  border: 2px solid @flavour;
+  border: 2px solid @flavor;
 }
 
 #custom-power_profile {
@@ -160,49 +160,49 @@ tooltip {
 #window {
   margin-left: 5px;
   border-radius: 20px 0 0 20px;
-  border-left: 2px solid @flavour;
-  border-right: 2px solid @flavour;
-  border-bottom: 2px solid @flavour;
-  border-top: 2px solid @flavour;
+  border-left: 2px solid @flavor;
+  border-right: 2px solid @flavor;
+  border-bottom: 2px solid @flavor;
+  border-top: 2px solid @flavor;
 }
 #keyboard-state {
   margin-right: 5px;
   border-radius: 0 20px 20px 0;
-  border-right: 2px solid @flavour;
-  border-bottom: 2px solid @flavour;
-  border-top: 2px solid @flavour;
+  border-right: 2px solid @flavor;
+  border-bottom: 2px solid @flavor;
+  border-top: 2px solid @flavor;
 }
 
 window#waybar.empty #keyboard-state {
   border-radius: 20px;
-  border: 2px solid @flavour;
+  border: 2px solid @flavor;
 }
 
 #clock {
-  color: @flavour;
+  color: @flavor;
   border-radius: 20px;
   margin-left: 5px;
   border-right: 0px;
   transition: 0.1s;
   padding-right: 13px;
   padding-left: 13px;
-  border: 2px solid @flavour;
+  border: 2px solid @flavor;
 }
 
 #network {
-  color: @flavour;
+  color: @flavor;
   border-radius: 20px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: 5px;
-  border: 2px solid @flavour;
+  border: 2px solid @flavor;
 }
 
 #cpu {
   border-radius: 20px 0 0 20px;
-  border-left: 2px solid @flavour;
-  border-bottom: 2px solid @flavour;
-  border-top: 2px solid @flavour;
+  border-left: 2px solid @flavor;
+  border-bottom: 2px solid @flavor;
+  border-top: 2px solid @flavor;
 }
 
 #memory {
@@ -216,9 +216,9 @@ window#waybar.empty #keyboard-state {
 #battery {
   color: @green;
   border-radius: 0 20px 20px 0;
-  border-right: 2px solid @flavour;
-  border-bottom: 2px solid @flavour;
-  border-top: 2px solid @flavour;
+  border-right: 2px solid @flavor;
+  border-bottom: 2px solid @flavor;
+  border-top: 2px solid @flavor;
   margin-right: 5px;
   padding-right: 15px;
   border-left: 0px;
@@ -260,7 +260,7 @@ window#waybar.empty #keyboard-state {
 }
 
 #bluetooth {
-  color: @flavour;
+  color: @flavor;
   border-radius: 20px;
   margin-right: 10px;
 }
@@ -284,7 +284,7 @@ window#waybar.empty #keyboard-state {
 }
 
 #pulseaudio.microphone {
-  color: @flavour;
+  color: @flavor;
   border-radius: 20px 0px 0px 20px;
   border-left: 2px solid @blue;
   border-top: 2px solid @blue;
@@ -303,25 +303,25 @@ window#waybar.empty #keyboard-state {
   margin-right: 5px;
   padding-right: 15px;
   border-left: 0px;
-  border-top: 2px solid @flavour;
-  border-right: 2px solid @flavour;
-  border-bottom: 2px solid @flavour;
+  border-top: 2px solid @flavor;
+  border-right: 2px solid @flavor;
+  border-bottom: 2px solid @flavor;
 }
 
 #battery.good {
-  color: @flavour;
+  color: @flavor;
   border-left: 0px;
-  border-top: 2px solid @flavour;
-  border-right: 2px solid @flavour;
-  border-bottom: 2px solid @flavour;
+  border-top: 2px solid @flavor;
+  border-right: 2px solid @flavor;
+  border-bottom: 2px solid @flavor;
 }
 
 #battery.warning {
   color: @red;
   border-left: 0px;
-  border-top: 2px solid @flavour;
-  border-right: 2px solid @flavour;
-  border-bottom: 2px solid @flavour;
+  border-top: 2px solid @flavor;
+  border-right: 2px solid @flavor;
+  border-bottom: 2px solid @flavor;
 }
 
 #battery.charging {
@@ -331,9 +331,9 @@ window#waybar.empty #keyboard-state {
 #battery.critical {
   color: @red;
   border-left: 0px;
-  border-top: 2px solid @flavour;
-  border-right: 2px solid @flavour;
-  border-bottom: 2px solid @flavour;
+  border-top: 2px solid @flavor;
+  border-right: 2px solid @flavor;
+  border-bottom: 2px solid @flavor;
 }
 
 #custom-weather {

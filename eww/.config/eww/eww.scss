@@ -1,3 +1,32 @@
+$rosewater: #f5e0dc;
+$flamingo: #f2cdcd;
+$pink: #f5c2e7;
+$mauve: #cba6f7;
+$red: #f38ba8;
+$maroon: #eba0ac;
+$peach: #fab387;
+$yellow: #f9e2af;
+$green: #a6e3a1;
+$teal: #94e2d5;
+$sky: #89dceb;
+$sapphire: #74c7ec;
+$blue: #89b4fa;
+$lavender: #b4befe;
+$text: #cdd6f4;
+$subtext1: #bac2de;
+$subtext0: #a6adc8;
+$overlay2: #9399b2;
+$overlay1: #7f849c;
+$overlay0: #6c7086;
+$surface2: #585b70;
+$surface1: #45475a;
+$surface0: #313244;
+$base: #1e1e2e;
+$mantle: #181825;
+$crust: #11111b;
+
+$flavor: $flamingo;
+
 *{
     font-family: "JetBrains Mono Nerd Font";
     font-weight: bold;
@@ -5,7 +34,7 @@
 }
 
 .wallpaper-grid-container{
-    border: solid 2px #cba6f7;
+    border: solid 2px $flavor;
 }
 
 .edit-button,
@@ -17,15 +46,15 @@
 }
 
 .close-button{
-    color: #f48ba8;
+    color: $red;
 }
 
 .edit-button{
-    color: #89b4fa;
+    color: $blue;
 }
 
 .back-button{
-    color: #a6e3a1;
+    color: $green;
 }
 
 .wallpaper-image {
@@ -45,35 +74,63 @@
     margin: 0;
 }
 
-.flavour-button{
+.flavor-button{
     min-width: 50px;
     min-height: 50px;
 }
 
-.flavour-button.flavour-mauve{
-    background-color: #cba6f7;
+.flavor-button.flavor-blue{
+    background-color: $blue;
 }
 
-.flavour-button.flavour-lavender{
-    background-color: #b4befe;
+.flavor-button.flavor-flamingo{
+    background-color: $flamingo;
 }
 
-.flavour-button.flavour-flamingo{
-    background-color: #f2cdcd;
+.flavor-button.flavor-green{
+    background-color: $green;
 }
 
-.flavour-button.flavour-teal{
-    background-color: #94e2d5;
+.flavor-button.flavor-lavender{
+    background-color: $lavender;
 }
 
-.flavour-button.flavour-pink{
-    background-color: #f5c2e7;
+.flavor-button.flavor-maroon{
+    background-color: $maroon;
 }
 
-.flavour-button.flavour-sky{
-    background-color: #89dceb;
+.flavor-button.flavor-mauve{
+    background-color: $mauve;
 }
 
-.flavour-button.flavour-maroon{
-    background-color: #eba0ac;
+.flavor-button.flavor-peach{
+    background-color: $peach;
+}
+
+.flavor-button.flavor-pink{
+    background-color: $pink;
+}
+
+.flavor-button.flavor-red{
+    background-color: $red;
+}
+
+.flavor-button.flavor-rosewater{
+    background-color: $rosewater;
+}
+
+.flavor-button.flavor-sapphire{
+    background-color: $sapphire;
+}
+
+.flavor-button.flavor-sky{
+    background-color: $sky;
+}
+
+.flavor-button.flavor-teal{
+    background-color: $teal;
+}
+
+.flavor-button.flavor-yellow{
+    background-color: $yellow;
 }
