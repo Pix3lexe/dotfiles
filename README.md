@@ -125,7 +125,13 @@ stow -D -t ~ nvim
   ![image](https://github.com/user-attachments/assets/83cd8055-9bfa-49b4-bab6-9ac464c8e751)
 
 - **Desktop and Wofi**
-  ![image](https://github.com/user-attachments/assets/063218e1-cad4-4fde-ae42-7640efc7dcc8)
+  ![image](https://github.com/user-attachments/assets/89614b6b-bd41-4091-904b-d297b866ef58)
+
+- **Custom wallpaper and flavor switcher**
+  ![image](https://github.com/user-attachments/assets/6258d85b-1960-4a01-a61b-d86ba2240a2f)
+  ![image](https://github.com/user-attachments/assets/bd81cc16-716a-4ab7-b231-015ee3165b94)
+
+
 
 ---
 
