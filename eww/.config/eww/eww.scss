@@ -67,6 +67,7 @@ $flavor: $flamingo;
     margin: 0;
     border: none;
     background: transparent;
+    color: $flavor;
 }
 
 .wallpaper-row{
@@ -77,6 +78,7 @@ $flavor: $flamingo;
 .flavor-button{
     min-width: 50px;
     min-height: 50px;
+    border-radius: 50%;
 }
 
 .flavor-button.flavor-blue{

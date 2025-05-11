@@ -15,7 +15,6 @@ fi
 EWW_SCSS="$HOME/.config/eww/eww.scss"
 if [ -f "$EWW_SCSS" ]; then
     sed -i "s/^\$flavor: \$[a-zA-Z]*;/\$flavor: \$$flavor;/g" "$EWW_SCSS"
-    eww refresh
 fi
 
 # 2. Replace the @define-color flavor @[CURRENT_flavor]; in ~/.config/waybar/style.css and ~/.config/wofi/style.css
