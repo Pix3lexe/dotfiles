@@ -75,64 +75,78 @@ $flavor: $flamingo;
     margin: 0;
 }
 
-.flavor-button{
+.flavor-button {
     min-width: 50px;
     min-height: 50px;
     border-radius: 50%;
 }
 
-.flavor-button.flavor-blue{
-    background-color: $blue;
+.flavor-button.flavor-blue {
+    background: linear-gradient(135deg, $blue, darken($blue, 10%));
+    box-shadow: 0 2px 4px darken($blue, 25%);
 }
 
-.flavor-button.flavor-flamingo{
-    background-color: $flamingo;
+.flavor-button.flavor-flamingo {
+    background: linear-gradient(135deg, $flamingo, darken($flamingo, 10%));
+    box-shadow: 0 2px 4px darken($flamingo, 25%);
 }
 
-.flavor-button.flavor-green{
-    background-color: $green;
+.flavor-button.flavor-green {
+    background: linear-gradient(135deg, $green, darken($green, 10%));
+    box-shadow: 0 2px 4px darken($green, 25%);
 }
 
-.flavor-button.flavor-lavender{
-    background-color: $lavender;
+.flavor-button.flavor-lavender {
+    background: linear-gradient(135deg, $lavender, darken($lavender, 10%));
+    box-shadow: 0 2px 4px darken($lavender, 25%);
 }
 
-.flavor-button.flavor-maroon{
-    background-color: $maroon;
+.flavor-button.flavor-maroon {
+    background: linear-gradient(135deg, $maroon, darken($maroon, 10%));
+    box-shadow: 0 2px 4px darken($maroon, 25%);
 }
 
-.flavor-button.flavor-mauve{
-    background-color: $mauve;
+.flavor-button.flavor-mauve {
+    background: linear-gradient(135deg, $mauve, darken($mauve, 10%));
+    box-shadow: 0 2px 4px darken($mauve, 25%);
 }
 
-.flavor-button.flavor-peach{
-    background-color: $peach;
+.flavor-button.flavor-peach {
+    background: linear-gradient(135deg, $peach, darken($peach, 10%));
+    box-shadow: 0 2px 4px darken($peach, 25%);
 }
 
-.flavor-button.flavor-pink{
-    background-color: $pink;
+.flavor-button.flavor-pink {
+    background: linear-gradient(135deg, $pink, darken($pink, 10%));
+    box-shadow: 0 2px 4px darken($pink, 25%);
 }
 
-.flavor-button.flavor-red{
-    background-color: $red;
+.flavor-button.flavor-red {
+    background: linear-gradient(135deg, $red, darken($red, 10%));
+    box-shadow: 0 2px 4px darken($red, 25%);
 }
 
-.flavor-button.flavor-rosewater{
-    background-color: $rosewater;
+.flavor-button.flavor-rosewater {
+    background: linear-gradient(135deg, $rosewater, darken($rosewater, 10%));
+    box-shadow: 0 2px 4px darken($rosewater, 25%);
 }
 
-.flavor-button.flavor-sapphire{
-    background-color: $sapphire;
+.flavor-button.flavor-sapphire {
+    background: linear-gradient(135deg, $sapphire, darken($sapphire, 10%));
+    box-shadow: 0 2px 4px darken($sapphire, 25%);
 }
 
-.flavor-button.flavor-sky{
-    background-color: $sky;
+.flavor-button.flavor-sky {
+    background: linear-gradient(135deg, $sky, darken($sky, 10%));
+    box-shadow: 0 2px 4px darken($sky, 25%);
 }
 
-.flavor-button.flavor-teal{
-    background-color: $teal;
+.flavor-button.flavor-teal {
+    background: linear-gradient(135deg, $teal, darken($teal, 10%));
+    box-shadow: 0 2px 4px darken($teal, 25%);
 }
 
-.flavor-button.flavor-yellow{
-    background-color: $yellow;
+.flavor-button.flavor-yellow {
+    background: linear-gradient(135deg, $yellow, darken($yellow, 10%));
+    box-shadow: 0 2px 4px darken($yellow, 25%);
 }
