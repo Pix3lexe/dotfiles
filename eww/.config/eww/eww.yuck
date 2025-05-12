@@ -1,5 +1,7 @@
 (deflisten grid :initial "[]"
   `find $HOME/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | [_nwise(4)]'`)
+
+(defvar current_flavor "flamingo")
 (defvar wallpaper_script "$HOME/.config/eww/scripts/eww_wallpaper_changer.sh")
 (defvar flavor_script "$HOME/.config/eww/scripts/flavor_changer.sh")
 (defvar show_flavors false)
@@ -39,19 +41,19 @@
       :orientation "h"
       :spacing 8
       (button
-        :class "flavor-button flavor-blue"
+        :class "flavor-button flavor-blue ${current_flavor == 'blue' ? 'selected' : ''}"
         :onclick "${flavor_script} --blue"
         "Blue")
       (button
-        :class "flavor-button flavor-flamingo"
+        :class "flavor-button flavor-flamingo ${current_flavor == 'flamingo' ? 'selected' : ''}"
         :onclick "${flavor_script} --flamingo"
         "Flamingo")
       (button
-        :class "flavor-button flavor-green"
+        :class "flavor-button flavor-green ${current_flavor == 'green' ? 'selected' : ''}"
         :onclick "${flavor_script} --green"
         "Green")
       (button
-        :class "flavor-button flavor-lavender"
+        :class "flavor-button flavor-lavender ${current_flavor == 'lavender' ? 'selected' : ''}"
         :onclick "${flavor_script} --lavender"
         "Lavender"))
     (box
@@ -59,19 +61,19 @@
       :orientation "h"
       :spacing 8
       (button
-        :class "flavor-button flavor-maroon"
+        :class "flavor-button flavor-maroon ${current_flavor == 'maroon' ? 'selected' : ''}"
         :onclick "${flavor_script} --maroon"
         "Maroon")
       (button
-        :class "flavor-button flavor-mauve"
+        :class "flavor-button flavor-mauve ${current_flavor == 'mauve' ? 'selected' : ''}"
         :onclick "${flavor_script} --mauve"
         "Mauve")
       (button
-        :class "flavor-button flavor-peach"
+        :class "flavor-button flavor-peach ${current_flavor == 'peach' ? 'selected' : ''}"
         :onclick "${flavor_script} --peach"
         "Peach")
       (button
-        :class "flavor-button flavor-pink"
+        :class "flavor-button flavor-pink ${current_flavor == 'pink' ? 'selected' : ''}"
         :onclick "${flavor_script} --pink"
         "Pink"))
     (box
@@ -79,19 +81,19 @@
       :orientation "h"
       :spacing 8
       (button
-        :class "flavor-button flavor-red"
+        :class "flavor-button flavor-red ${current_flavor == 'red' ? 'selected' : ''}"
         :onclick "${flavor_script} --red"
         "Red")
       (button
-        :class "flavor-button flavor-rosewater"
+        :class "flavor-button flavor-rosewater ${current_flavor == 'rosewater' ? 'selected' : ''}"
         :onclick "${flavor_script} --rosewater"
         "Rosewater")
       (button
-        :class "flavor-button flavor-sapphire"
+        :class "flavor-button flavor-sapphire ${current_flavor == 'sapphire' ? 'selected' : ''}"
         :onclick "${flavor_script} --sapphire"
         "Sapphire")
       (button
-        :class "flavor-button flavor-sky"
+        :class "flavor-button flavor-sky ${current_flavor == 'sky' ? 'selected' : ''}"
         :onclick "${flavor_script} --sky"
         "Sky"))
     (box
@@ -99,11 +101,11 @@
       :orientation "h"
       :spacing 8
       (button
-        :class "flavor-button flavor-teal"
+        :class "flavor-button flavor-teal ${current_flavor == 'teal' ? 'selected' : ''}"
         :onclick "${flavor_script} --teal"
         "Teal")
       (button
-        :class "flavor-button flavor-yellow"
+        :class "flavor-button flavor-yellow ${current_flavor == 'yellow' ? 'selected' : ''}"
         :onclick "${flavor_script} --yellow"
         "Yellow"))))
 

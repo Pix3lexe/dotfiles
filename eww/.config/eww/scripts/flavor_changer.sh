@@ -11,10 +11,15 @@ if [ $# -gt 0 ]; then
     fi
 fi
 
-# 1. Replace the flavor in eww.scss
+# 1. Replace the flavor in eww.scss and eww.yuck
 EWW_SCSS="$HOME/.config/eww/eww.scss"
 if [ -f "$EWW_SCSS" ]; then
     sed -i "s/^\$flavor: \$[a-zA-Z]*;/\$flavor: \$$flavor;/g" "$EWW_SCSS"
+fi
+
+EWW_YUCK="$HOME/.config/eww/eww.yuck"
+if [ -f "$EWW_YUCK" ]; then
+    sed -i "s/(defvar current_flavor \"[a-zA-Z0-9_]*\")/(defvar current_flavor \"$flavor\")/g" "$EWW_YUCK"
 fi
 
 # 2. Replace the @define-color flavor @[CURRENT_flavor]; in ~/.config/waybar/style.css and ~/.config/wofi/style.css

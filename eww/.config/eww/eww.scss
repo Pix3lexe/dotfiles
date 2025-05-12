@@ -81,6 +81,10 @@ $flavor: $flamingo;
     border-radius: 50%;
 }
 
+.flavor-button.selected {
+  border: 3px solid #fff;
+}
+
 .flavor-button.flavor-blue {
     background: linear-gradient(135deg, $blue, darken($blue, 10%));
     box-shadow: 0 2px 4px darken($blue, 25%);
