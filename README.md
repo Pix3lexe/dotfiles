@@ -129,9 +129,7 @@ stow -D -t ~ nvim
 
 - **Custom wallpaper and flavor switcher**
   ![image](https://github.com/user-attachments/assets/6258d85b-1960-4a01-a61b-d86ba2240a2f)
-  ![image](https://github.com/user-attachments/assets/bd81cc16-716a-4ab7-b231-015ee3165b94)
-
-
+  ![image](https://github.com/user-attachments/assets/e1043f16-5d4e-46aa-bbf1-2fba16c83b85)
 
 ---
 
