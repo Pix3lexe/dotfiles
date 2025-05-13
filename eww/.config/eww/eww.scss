@@ -78,10 +78,11 @@ $flavor: $flamingo;
 .flavor-button {
     min-width: 50px;
     min-height: 50px;
-    border-radius: 50%;
+    border-radius: 40px;
+    margin: 10px;
 }
 
-.flavor-button.selected {
+.flavor-button:hover, .flavor-button.selected {
   border: 3px solid #fff;
 }
 

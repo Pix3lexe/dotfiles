@@ -35,79 +35,108 @@
     :visible {show_flavors}
     :class "flavor-grid"
     :orientation "v"
-    :spacing 10
+    :spacing 8
     (box
       :class "flavor-row"
       :orientation "h"
       :spacing 8
-      (button
-        :class "flavor-button flavor-blue ${current_flavor == 'blue' ? 'selected' : ''}"
-        :onclick "${flavor_script} --blue"
-        "Blue")
-      (button
-        :class "flavor-button flavor-flamingo ${current_flavor == 'flamingo' ? 'selected' : ''}"
-        :onclick "${flavor_script} --flamingo"
-        "Flamingo")
-      (button
-        :class "flavor-button flavor-green ${current_flavor == 'green' ? 'selected' : ''}"
-        :onclick "${flavor_script} --green"
-        "Green")
-      (button
-        :class "flavor-button flavor-lavender ${current_flavor == 'lavender' ? 'selected' : ''}"
-        :onclick "${flavor_script} --lavender"
-        "Lavender"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-blue ${current_flavor == 'blue' ? 'selected' : ''}"
+          :onclick "${flavor_script} --blue"
+          :cursor "pointer"
+          "Blue"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-flamingo ${current_flavor == 'flamingo' ? 'selected' : ''}"
+          :onclick "${flavor_script} --flamingo"
+          "Flamingo"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-green ${current_flavor == 'green' ? 'selected' : ''}"
+          :onclick "${flavor_script} --green"
+          "Green"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-lavender ${current_flavor == 'lavender' ? 'selected' : ''}"
+          :onclick "${flavor_script} --lavender"
+          "Lavender")))
     (box
       :class "flavor-row"
       :orientation "h"
       :spacing 8
-      (button
-        :class "flavor-button flavor-maroon ${current_flavor == 'maroon' ? 'selected' : ''}"
-        :onclick "${flavor_script} --maroon"
-        "Maroon")
-      (button
-        :class "flavor-button flavor-mauve ${current_flavor == 'mauve' ? 'selected' : ''}"
-        :onclick "${flavor_script} --mauve"
-        "Mauve")
-      (button
-        :class "flavor-button flavor-peach ${current_flavor == 'peach' ? 'selected' : ''}"
-        :onclick "${flavor_script} --peach"
-        "Peach")
-      (button
-        :class "flavor-button flavor-pink ${current_flavor == 'pink' ? 'selected' : ''}"
-        :onclick "${flavor_script} --pink"
-        "Pink"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-maroon ${current_flavor == 'maroon' ? 'selected' : ''}"
+          :onclick "${flavor_script} --maroon"
+          "Maroon"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-mauve ${current_flavor == 'mauve' ? 'selected' : ''}"
+          :onclick "${flavor_script} --mauve"
+          "Mauve"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-peach ${current_flavor == 'peach' ? 'selected' : ''}"
+          :onclick "${flavor_script} --peach"
+          "Peach"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-pink ${current_flavor == 'pink' ? 'selected' : ''}"
+          :onclick "${flavor_script} --pink"
+          "Pink")))
     (box
       :class "flavor-row"
       :orientation "h"
       :spacing 8
-      (button
-        :class "flavor-button flavor-red ${current_flavor == 'red' ? 'selected' : ''}"
-        :onclick "${flavor_script} --red"
-        "Red")
-      (button
-        :class "flavor-button flavor-rosewater ${current_flavor == 'rosewater' ? 'selected' : ''}"
-        :onclick "${flavor_script} --rosewater"
-        "Rosewater")
-      (button
-        :class "flavor-button flavor-sapphire ${current_flavor == 'sapphire' ? 'selected' : ''}"
-        :onclick "${flavor_script} --sapphire"
-        "Sapphire")
-      (button
-        :class "flavor-button flavor-sky ${current_flavor == 'sky' ? 'selected' : ''}"
-        :onclick "${flavor_script} --sky"
-        "Sky"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-red ${current_flavor == 'red' ? 'selected' : ''}"
+          :onclick "${flavor_script} --red"
+          "Red"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-rosewater ${current_flavor == 'rosewater' ? 'selected' : ''}"
+          :onclick "${flavor_script} --rosewater"
+          "Rosewater"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-sapphire ${current_flavor == 'sapphire' ? 'selected' : ''}"
+          :onclick "${flavor_script} --sapphire"
+          "Sapphire"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-sky ${current_flavor == 'sky' ? 'selected' : ''}"
+          :onclick "${flavor_script} --sky"
+          "Sky")))
     (box
       :class "flavor-row"
       :orientation "h"
       :spacing 8
-      (button
-        :class "flavor-button flavor-teal ${current_flavor == 'teal' ? 'selected' : ''}"
-        :onclick "${flavor_script} --teal"
-        "Teal")
-      (button
-        :class "flavor-button flavor-yellow ${current_flavor == 'yellow' ? 'selected' : ''}"
-        :onclick "${flavor_script} --yellow"
-        "Yellow"))))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-teal ${current_flavor == 'teal' ? 'selected' : ''}"
+          :onclick "${flavor_script} --teal"
+          "Teal"))
+      (eventbox
+        :cursor "pointer"
+        (button
+          :class "flavor-button flavor-yellow ${current_flavor == 'yellow' ? 'selected' : ''}"
+          :onclick "${flavor_script} --yellow"
+          "Yellow")))))
 
 (defwidget wallpaper-grid []
   (box
