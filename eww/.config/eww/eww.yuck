@@ -5,6 +5,8 @@
 (defvar wallpaper_script "$HOME/.config/eww/scripts/eww_wallpaper_changer.sh")
 (defvar flavor_script "$HOME/.config/eww/scripts/flavor_changer.sh")
 (defvar show_flavors false)
+(defvar show_wallpaper_engine false)
+(defvar id_field "")
 
 (defwidget header []
   (box
@@ -18,21 +20,47 @@
       :onclick "eww close wallpaper-chooser && pkill eww" ; maybe find a better solution in the future but atm lingering processes seem to be a problem
       "✕")
     (button
-      :visible {!show_flavors}
+      :class "wallpaper-chooser-button"
+      :onclick "eww update show_flavors=false show_wallpaper_engine=false"
+      "󰸉")
+    (button
       :class "edit-button"
-      :onclick "eww update show_flavors=true"
+      :onclick "eww update show_flavors=true show_wallpaper_engine=false"
       "󰏘")
     (button
-      :visible {show_flavors}
-      :class "back-button"
-      :onclick "eww update show_flavors=false"
-      "󰸉")
+      :class "wallpaper-engine-button"
+      :onclick "eww update show_wallpaper_engine=true"
+      "󰗘")
+  )
+)
+
+(defwidget wallpaper-engine []
+  (box
+    :visible {show_wallpaper_engine}
+    :orientation "v"
+    :halign "center"
+    :valign "center"
+    :spacing 8
+
+    (label
+      :text "Wallpaper-Engine ID"
+    )
+    (input
+      :class "id-input"
+      :onaccept "linux-wallpaperengine --screen-root DP-1 --bg {}"
+      :onchange "eww update id_field={}"
+    )
+
+    (button
+      :onclick "linux-wallpaperengine --bg ${id_field}"
+      "Apply"
+    )
   )
 )
 
 (defwidget flavor-grid []
   (box
-    :visible {show_flavors}
+    :visible {(show_flavors) && (!show_wallpaper_engine)}
     :class "flavor-grid"
     :orientation "v"
     :spacing 8
@@ -140,7 +168,7 @@
 
 (defwidget wallpaper-grid []
   (box
-    :visible {!show_flavors}
+    :visible {(!show_flavors) && (!show_wallpaper_engine)}
     :class "wallpaper-grid"
     :orientation "v"
     (for row in {grid}
@@ -166,16 +194,17 @@
     (box
       :orientation "v"
       :vexpand true
+      (wallpaper-engine)
       (flavor-grid)
       (scroll
         :vscroll true
         :vexpand true
-        :visible {!show_flavors}
+        :visible {(!show_flavors) && (!show_wallpaper_engine)}
         (wallpaper-grid)))))
 
 (defwindow wallpaper-chooser
   :monitor 0
-  :focusable false
+  :focusable true
   :geometry (geometry
               :x "0px"
               :y "0px"

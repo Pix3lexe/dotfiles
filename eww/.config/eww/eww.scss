@@ -38,7 +38,8 @@ $flavor: $flamingo;
 }
 
 .edit-button,
-.back-button,
+.wallpaper-chooser-button,
+.wallpaper-engine-button,
 .close-button {
     background: transparent;
     border: none;
@@ -49,13 +50,12 @@ $flavor: $flamingo;
     color: $red;
 }
 
-.edit-button{
+.edit-button,
+.wallpaper-chooser-button,
+.wallpaper-engine-button {
     color: $flavor;
 }
 
-.back-button{
-    color: $flavor;
-}
 
 .wallpaper-image {
     border-radius: 0;
