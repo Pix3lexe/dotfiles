@@ -7,7 +7,7 @@
 (defvar show_flavors false)
 (defvar show_wallpaper_engine false)
 (defvar id_field "")
-(defvar dp1_enabled false)
+(defvar dp1_enabled false) ; add booleans for your displays here
 (defvar dp2_enabled false)
 (defvar dp3_enabled false)
 
@@ -52,7 +52,7 @@
       :onaccept "linux-wallpaperengine --screen-root DP-1 --bg {}"
       :onchange "eww update id_field={}"
     )
-    (button
+    (button ; add the if statements for your displays here
       :onclick "bash -c '
         if [ ${dp1_enabled} = true ]; then
           linux-wallpaperengine --screen-root DP-1 --bg ${id_field} &
@@ -71,7 +71,7 @@
     (box
       :orientation "h"
       :spacing 4
-      (box
+      (box ; add checkboxes for your displays here that toggle the booleans
         :orientation "h"
         :spacing 4
         (checkbox
