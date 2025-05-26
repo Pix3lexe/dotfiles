@@ -7,6 +7,9 @@
 (defvar show_flavors false)
 (defvar show_wallpaper_engine false)
 (defvar id_field "")
+(defvar dp1_enabled false)
+(defvar dp2_enabled false)
+(defvar dp3_enabled false)
 
 (defwidget header []
   (box
@@ -41,7 +44,6 @@
     :halign "center"
     :valign "center"
     :spacing 8
-
     (label
       :text "Wallpaper-Engine ID"
     )
@@ -50,10 +52,60 @@
       :onaccept "linux-wallpaperengine --screen-root DP-1 --bg {}"
       :onchange "eww update id_field={}"
     )
-
     (button
-      :onclick "linux-wallpaperengine --bg ${id_field}"
+      :onclick "bash -c '
+        if [ ${dp1_enabled} = true ]; then
+          linux-wallpaperengine --screen-root DP-1 --bg ${id_field} &
+        fi
+        if [ ${dp2_enabled} = true ]; then
+          linux-wallpaperengine --screen-root DP-2 --bg ${id_field} &
+        fi
+        if [ ${dp3_enabled} = true ]; then
+          linux-wallpaperengine --screen-root DP-3 --bg ${id_field} &
+        fi
+        wait
+      '"
       "Apply"
+    )
+
+    (box
+      :orientation "h"
+      :spacing 4
+      (box
+        :orientation "h"
+        :spacing 4
+        (checkbox
+          :checked {dp1_enabled}
+          :onchecked "eww update dp1_enabled=true"
+          :onunchecked "eww update dp1_enabled=false"
+        )
+        (label :text "DP-1")
+      )
+      (box
+        :orientation "h"
+        :spacing 4
+        (checkbox
+          :checked {dp2_enabled}
+          :onchecked "eww update dp2_enabled=true"
+          :onunchecked "eww update dp2_enabled=false"
+        )
+        (label :text "DP-2")
+      )
+      (box
+        :orientation "h"
+        :spacing 4
+        (checkbox
+          :checked {dp3_enabled}
+          :onchecked "eww update dp3_enabled=true"
+          :onunchecked "eww update dp3_enabled=false"
+        )
+        (label :text "DP-3")
+      )
+    )
+    (button
+      :class "close-button"
+      :onclick "pkill -f wallpaperengine"
+      "Kill"
     )
   )
 )
