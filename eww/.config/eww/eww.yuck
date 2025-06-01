@@ -49,19 +49,18 @@
     )
     (input
       :class "id-input"
-      :onaccept "linux-wallpaperengine --screen-root DP-1 --bg {}"
       :onchange "eww update id_field={}"
     )
     (button ; add the if statements for your displays here
       :onclick "bash -c '
         if [ ${dp1_enabled} = true ]; then
-          linux-wallpaperengine --screen-root DP-1 --bg ${id_field} &
+          linux-wallpaperengine --disable-mouse --screen-root DP-1 --bg ${id_field} &
         fi
         if [ ${dp2_enabled} = true ]; then
-          linux-wallpaperengine --screen-root DP-2 --bg ${id_field} &
+          linux-wallpaperengine --disable-mouse --screen-root DP-2 --bg ${id_field} &
         fi
         if [ ${dp3_enabled} = true ]; then
-          linux-wallpaperengine --screen-root DP-3 --bg ${id_field} &
+          linux-wallpaperengine --disable-mouse --screen-root DP-3 --bg ${id_field} &
         fi
         wait
       '"
