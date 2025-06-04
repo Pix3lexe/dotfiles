@@ -1,5 +1,6 @@
 (deflisten grid :initial "[]"
-  `find $HOME/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | [_nwise(4)]'`)
+  `find $HOME/.config/eww/thumbnails/ -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | sort | jq -R -n -c '[inputs] | . as $all | [range(0; length; 4) | $all[.:(.+4)]]'`
+)
 
 (defvar current_flavor "flamingo")
 (defvar wallpaper_script "$HOME/.config/eww/scripts/eww_wallpaper_changer.sh")
