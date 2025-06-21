@@ -122,7 +122,7 @@ stow -D -t ~ nvim
 
 - **Neovim**
   ![image](https://github.com/user-attachments/assets/2bde98b8-966d-4b7c-b1fb-b62583892ffd)
-  ![image](https://github.com/user-attachments/assets/83cd8055-9bfa-49b4-bab6-9ac464c8e751)
+  ![image](https://github.com/user-attachments/assets/97e603fc-74a4-4723-85d8-ff04d20de090)
 
 - **Desktop and Wofi**
   ![image](https://github.com/user-attachments/assets/89614b6b-bd41-4091-904b-d297b866ef58)
