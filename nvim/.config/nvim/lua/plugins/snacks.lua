@@ -67,6 +67,7 @@ return { -- Collection of small plugins (eg dashboard)
     },
     picker = { enabled = true },
     explorer = { enabled = true },
+    terminal = {},
   },
   keys = {
     {
@@ -75,6 +76,13 @@ return { -- Collection of small plugins (eg dashboard)
         Snacks.toggle.diagnostics():toggle()
       end,
       desc = '[T]oggle [d]iagnostics',
+    },
+    {
+      '<leader>tt',
+      function()
+        Snacks.terminal.toggle()
+      end,
+      desc = '[T]oggle [T]erminal',
     },
     -- Top Pickers & Explorer
     {
@@ -291,13 +299,6 @@ return { -- Collection of small plugins (eg dashboard)
         Snacks.picker.colorschemes()
       end,
       desc = 'Colorschemes',
-    },
-    {
-      '<leader>st',
-      function()
-        Snacks.picker.todo_comments()
-      end,
-      desc = 'Search Todos',
     },
     -- LSP
     {

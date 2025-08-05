@@ -1,5 +1,6 @@
 return { -- Statusline
   'nvim-lualine/lualine.nvim',
+  event = { 'BufReadPost', 'BufNewFile' },
   dependencies = { 'nvim-tree/nvim-web-devicons', opt = true },
   config = function()
     require('lualine').setup {

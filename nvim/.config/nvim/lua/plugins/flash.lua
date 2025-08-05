@@ -1,6 +1,6 @@
 return { -- Move as fast as flash ;)
   'folke/flash.nvim',
-  event = 'VeryLazy',
+  keys = { 'f', 'F', 'r', 'R', '<c-f>' },
   config = function()
     ---@type Flash.Config
     local opts = {

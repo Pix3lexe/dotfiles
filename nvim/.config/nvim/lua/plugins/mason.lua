@@ -1,5 +1,7 @@
 return {
   'williamboman/mason.nvim',
+  cmd = 'Mason',
+  event = 'VeryLazy',
   config = function()
     require('mason').setup {
       ui = {
