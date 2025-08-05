@@ -1,5 +1,6 @@
 return { -- Edit filesystem like a vim buffer
   'stevearc/oil.nvim',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
   cmd = 'Oil',
   keys = {
     {
