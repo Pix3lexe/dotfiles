@@ -6,6 +6,10 @@ return {
   opts = {
     instructions_file = 'avante.md',
     provider = 'copilot',
+    auto_suggestions = false, -- Disable avante auto-suggestions to avoid conflicts with blink.cmp
+    behaviour = {
+      auto_suggestions = false, -- Make sure auto suggestions are disabled
+    },
     input = {
       provider = 'snacks',
     },
