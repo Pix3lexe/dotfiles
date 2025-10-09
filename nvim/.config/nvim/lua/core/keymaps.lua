@@ -22,3 +22,12 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<leader>cg', function()
   vim.fn.jobstart({ 'xdg-open', 'https://chat.openai.com' }, { detach = true })
 end, { desc = 'Open ChatGPT' })
+
+-- umlaute
+vim.keymap.set('i', '<M-a>', 'ä')
+vim.keymap.set('i', '<M-o>', 'ö')
+vim.keymap.set('i', '<M-u>', 'ü')
+vim.keymap.set('i', '<M-s>', 'ß')
+vim.keymap.set('i', '<M-A>', 'Ä')
+vim.keymap.set('i', '<M-O>', 'Ö')
+vim.keymap.set('i', '<M-U>', 'Ü')

@@ -1,2 +1,2 @@
-include catppuccin-mocha
+# include catppuccin-mocha
 set synctex true
