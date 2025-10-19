@@ -66,7 +66,6 @@ return { -- Collection of small plugins (eg dashboard)
       },
     },
     picker = { enabled = true },
-    explorer = { enabled = true },
     terminal = {},
   },
   keys = {
