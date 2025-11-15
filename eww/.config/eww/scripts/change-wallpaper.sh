@@ -24,3 +24,8 @@ in_block && /^\s*path\s*=/ { sub(/=.*/, "= " newpath) }
 
 # Apply wallpaper
 hyprctl hyprpaper reload ,"$WALL"
+
+# matugen
+matugen image $WALL
+killall -9 swaync
+swaync &
