@@ -1,0 +1,5 @@
+[config]
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/swaync-colors.css'
+output_path = '~/.config/swaync/matugen/colors.css'
