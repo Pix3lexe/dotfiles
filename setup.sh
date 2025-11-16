@@ -20,8 +20,7 @@ done
 git submodule init
 git submodule update
 ~/.config/eww/scripts/thumbnail_generator.sh
+~/.config/eww/scripts/change-wallpaper.sh ~/.config/backgrounds/lofiwallpaper.png
 sudo usermod -aG input $USER # for capslock waybar indicator
 
-# after that (if youre using gnome only!) install the following extensions: AppIndicator and KStatusNotifierItem Support, Blur my Shell, Coverflow Alt-Tab, Dash to Dock, [QSTweak] Quick Setting Tweaker, Unblank lock screen, User Themes
-# Install the theme: Layan-Dark
-# Install Sweet-cursors and Deepin2022-Dark icons
+# Install Sweet-cursors

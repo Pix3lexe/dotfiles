@@ -29,6 +29,7 @@ xdg-desktop-portal-hyprland
 hyprshot
 catppuccin-gtk-theme-mocha
 eww
+matugen-bin
 
 # Misc
 wl-clipboard

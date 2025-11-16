@@ -24,6 +24,7 @@ Dotfiles are configuration files for various programs and tools, often starting 
 - Designed for Linux-based systems (tested on Arch Linux).
 - Allows quick deployment across systems.
 - Uses **GNU Stow**.
+- Uses matugen for materialized colors
 
 ---
 
@@ -49,9 +50,11 @@ Dotfiles are configuration files for various programs and tools, often starting 
    cd ~/dotfiles
    ```
 2. Run setup script to install everything and deploy configurations:
+
    ```bash
    ./setup.sh
    ```
+
    - **✏️Note**: If you only want to have a specific config look up [Usage](#usage)
    - **⚠️Warning**: This script does not guarantee that every optional dependency is installed (eg. a latex compiler so that vimtex works). Install them by yourself if you need them.
 
@@ -62,6 +65,7 @@ Before using these dotfiles, make sure the following dependencies are installed 
 - **hyprland**: Window manager for Wayland.
 - **wofi**: Application launcher.
 - **waybar**: Status bar for Wayland.
+- **matugen**: Materialized colors based on wallpaper.
 - **ttf-font-awesome**: Icon font for status bars and UI customization.
 - **hyprshot**: Screenshot tool for Hyprland.
 - **swaync**: Notification daemon.
