@@ -1,6 +1,27 @@
 @import "mocha.css";
+@import "colors.css";
 
-@define-color flavor @flamingo;
+/* Base surfaces */
+@define-color base                @background;
+@define-color mantle              @surface_container_lowest;
+@define-color surface0            @surface_container_low;
+@define-color surface2            @surface_container_high;
+
+/* Text */
+@define-color text                @on_surface;
+@define-color subtext0            @on_surface_variant;
+
+/* Accents */
+@define-color flavor              @primary;
+@define-color blue                @primary;
+@define-color green               @tertiary;
+@define-color pink                @secondary;
+@define-color red                 @error;
+@define-color yellow              @tertiary;
+
+/* Extra used tokens */
+@define-color maroon              @error;
+@define-color theme               @primary;
 
 * {
   border: none;
