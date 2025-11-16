@@ -20,7 +20,7 @@ done
 git submodule init
 git submodule update
 ~/.config/eww/scripts/thumbnail_generator.sh
-~/.config/eww/scripts/change-wallpaper.sh ~/.config/backgrounds/lofiwallpaper.png
+~/.config/eww/scripts/change-wallpaper.sh ~/.config/backgrounds/walls-catppuccin-mocha/astronaut.png
 sudo usermod -aG input $USER # for capslock waybar indicator
 
 # Install Sweet-cursors
