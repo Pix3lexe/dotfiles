@@ -48,6 +48,51 @@ zinit cdreplay -q
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# zsh-syntax-highlighting mappings from kitty theme
+# Main accent: blue (color4)
+ZSH_HIGHLIGHT_STYLES[command]='fg=4'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=4'
+ZSH_HIGHLIGHT_STYLES[function]='fg=4'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=4'
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=4'
+
+# Errors: red (color1)
+ZSH_HIGHLIGHT_STYLES[error]='fg=1,bold'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=1,bold'
+
+# Variables & parameters: green (color2)
+ZSH_HIGHLIGHT_STYLES[variable]='fg=2'
+ZSH_HIGHLIGHT_STYLES[parameter]='fg=2'
+ZSH_HIGHLIGHT_STYLES[special-param]='fg=2,bold'
+
+# Paths & directories: cyan (color6)
+ZSH_HIGHLIGHT_STYLES[path]='fg=6'
+ZSH_HIGHLIGHT_STYLES[dir]='fg=6,bold'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=6'
+
+# Options: yellow (color3)
+ZSH_HIGHLIGHT_STYLES[option]='fg=3'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=3'
+ZSH_HIGHLIGHT_STYLES[assignment]='fg=3'
+
+# Strings: magenta (color5)
+ZSH_HIGHLIGHT_STYLES[single-quoted]='fg=5'
+ZSH_HIGHLIGHT_STYLES[double-quoted]='fg=5'
+ZSH_HIGHLIGHT_STYLES[back-quoted]='fg=5'
+ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=5,bold'
+
+# Comments: subdued white (color7)
+ZSH_HIGHLIGHT_STYLES[comment]='fg=7,italic'
+
+# Operators & delimiters: blue (color4)
+ZSH_HIGHLIGHT_STYLES[operator]='fg=4,bold'
+ZSH_HIGHLIGHT_STYLES[delimiter]='fg=4'
+ZSH_HIGHLIGHT_STYLES[brackets]='fg=4,bold'
+ZSH_HIGHLIGHT_STYLES[backslash]='fg=4'
+
+# Default text
+ZSH_HIGHLIGHT_STYLES[default]='fg=7'
+
 # keybinds
 bindkey -e
 bindkey '^p' history-search-backward
