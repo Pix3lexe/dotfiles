@@ -23,6 +23,7 @@ hyprpaper
 nwg-look
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
+imagemagick
 
 
 # AUR dependencies
