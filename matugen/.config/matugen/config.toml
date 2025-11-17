@@ -22,3 +22,7 @@ post_hook = "kitty +kitten themes --reload-in=all matugen"
 [templates.yazi]
 input_path = '~/.config/matugen/templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
+
+[templates.wofi]
+input_path = '~/.config/matugen/templates/wofi-colors.css'
+output_path = '~/.config/wofi/style.css'

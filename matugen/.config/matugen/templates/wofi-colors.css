@@ -8,7 +8,7 @@
 
 window {
     margin: 0px;
-    color: #c7bfff;
+    color: {{ colors.primary.default.hex }};
     border-radius: 15px;
     background: transparent;
 }
@@ -17,7 +17,7 @@ window {
     padding: 5px 25px 5px 5px;
     margin: 10px 10px 0 10px;
     border: none;
-    color: #c7bfff;
+    color: {{ colors.primary.default.hex }};
     font-weight: bold;
     background: transparent;
     outline: none;
@@ -30,7 +30,7 @@ window {
 
 #inner-box {
     margin: 4px;
-    color: #c7bfff;
+    color: {{ colors.primary.default.hex }};
     background: transparent;
     border-radius: 15px;
 }
@@ -41,7 +41,7 @@ window {
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.2);
     padding: 5px;
-    border: 2px solid #c7bfff;
+    border: 2px solid {{ colors.primary.default.hex }};
 }
 
 #scroll {
@@ -61,7 +61,7 @@ window {
 }
 
 #text:selected {
-    color: #c7bfff;
+    color: {{ colors.primary.default.hex }};
     margin: 0px 0px;
     border: none;
     border-radius: 15px;
