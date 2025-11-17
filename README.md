@@ -122,19 +122,24 @@ stow -D -t ~ nvim
 ## 📸 **Screenshots** <a name="screenshots"></a>
 
 - **Terminal**
-  ![image](https://github.com/user-attachments/assets/65dcd04e-35eb-4f9e-9f2c-d2994643eec4)
+  ![image](https://github.com/user-attachments/assets/97dacc7f-48ee-4661-ae6e-dcfafa3c9dc9)
+
+
 
 - **Neovim**
   ![image](https://github.com/user-attachments/assets/2bde98b8-966d-4b7c-b1fb-b62583892ffd)
   ![image](https://github.com/user-attachments/assets/97e603fc-74a4-4723-85d8-ff04d20de090)
 
-- **Desktop and Wofi**
-  ![image](https://github.com/user-attachments/assets/89614b6b-bd41-4091-904b-d297b866ef58)
+- **Desktop**
+  ![image](https://github.com/user-attachments/assets/377d8e8b-3112-4dba-8074-401501bdd2b8)
 
-- **Custom wallpaper and flavor switcher**
-  ![image](https://github.com/user-attachments/assets/6258d85b-1960-4a01-a61b-d86ba2240a2f)
-  ![image](https://github.com/user-attachments/assets/e1043f16-5d4e-46aa-bbf1-2fba16c83b85)
+- **Lockscreen**
+  ![image](https://github.com/user-attachments/assets/64ade365-a9b4-4ea6-be60-b2b4c5c61810)
 
+- **Wallpaper and flavor switcher**
+  ![image](https://github.com/user-attachments/assets/ee1ca094-75fd-4f15-979c-21d8e2d671fc)
+  ![image](https://github.com/user-attachments/assets/7558fb3b-bfab-468c-a11b-065443cab156)
+  ([Chainsaw Man wallpaper used](https://wallpapercave.com/w/wp15865971))
 ---
 
 ## ✉️ **Contact** <a name="contact"></a>
