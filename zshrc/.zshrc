@@ -131,6 +131,7 @@ alias nv='nvim'
 alias dockfix='$HOME/backups/dockfix.sh'
 alias saveconf='/home/simon/backups/gnome_saveconf.sh'
 alias lg='lazygit'
+alias yz='yazi'
 
 # shell integrations
 eval "$(fzf --zsh)"
@@ -140,6 +141,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+export GTK_IM_MODULE='fcitx'
+export QT_IM_MODULE='fcitx'
+export SDL_IM_MODULE='fcitx'
+export XMODIFIERS='@im-fcitx'
 
 _fix_cursor(){
     echo -ne '\e[3 q'
