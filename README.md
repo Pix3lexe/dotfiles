@@ -1,6 +1,14 @@
-# Pix3lexe dotfiles
+<h1 align=center>Pix3lexe dotfiles</h1>
 
-Welcome to my legendary dotfiles repository! The setup script is designed for arch but everything can be installed on basically every linux distro if you do it manually. Have fun ^^
+<div align=center>
+
+![GitHub last commit](https://img.shields.io/github/last-commit/Pix3lexe/dotfiles?style=for-the-badge&labelColor=101418&color=9ccbfb)
+![GitHub Repo stars](https://img.shields.io/github/stars/Pix3lexe/dotfiles?style=for-the-badge&labelColor=101418&color=b9c8da)
+![GitHub repo size](https://img.shields.io/github/repo-size/Pix3lexe/dotfiles?style=for-the-badge&labelColor=101418&color=d3bfe6)
+
+</div>
+
+Welcome to my dotfiles repository! The setup script is designed for arch but everything can be installed on basically every linux distro if you do it manually. Have fun ^^
 
 ---
 
@@ -124,8 +132,6 @@ stow -D -t ~ nvim
 - **Terminal**
   ![image](https://github.com/user-attachments/assets/97dacc7f-48ee-4661-ae6e-dcfafa3c9dc9)
 
-
-
 - **Neovim**
   ![image](https://github.com/user-attachments/assets/2bde98b8-966d-4b7c-b1fb-b62583892ffd)
   ![image](https://github.com/user-attachments/assets/97e603fc-74a4-4723-85d8-ff04d20de090)
@@ -140,6 +146,7 @@ stow -D -t ~ nvim
   ![image](https://github.com/user-attachments/assets/ee1ca094-75fd-4f15-979c-21d8e2d671fc)
   ![image](https://github.com/user-attachments/assets/7558fb3b-bfab-468c-a11b-065443cab156)
   ([Chainsaw Man wallpaper used](https://wallpapercave.com/w/wp15865971))
+
 ---
 
 ## ✉️ **Contact** <a name="contact"></a>
