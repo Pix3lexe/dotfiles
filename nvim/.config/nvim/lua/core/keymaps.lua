@@ -19,9 +19,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '<leader>cg', function()
-  vim.fn.jobstart({ 'xdg-open', 'https://chat.openai.com' }, { detach = true })
-end, { desc = 'Open ChatGPT' })
+-- Scroll half-page up/down and center cursor
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 -- umlaute
 vim.keymap.set('i', '<M-a>', 'ä')
