@@ -48,7 +48,7 @@ zinit cdreplay -q
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=default,dim'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 
 # zsh-syntax-highlighting mappings from kitty theme
 # Main accent: blue (color4)
