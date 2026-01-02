@@ -11,7 +11,7 @@ fi
 WALL="$1"
 
 # Update hyprpaper config
-sed -i "s/path =*$/path = $WALL/g" ~/.config/hypr/hyprpaper.conf
+sed -i "s|path =.*$|path = $WALL|g" ~/.config/hypr/hyprpaper.conf
 
 # Update hyprlock background
 awk -v newpath="$WALL" '
