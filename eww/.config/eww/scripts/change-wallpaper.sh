@@ -11,8 +11,7 @@ fi
 WALL="$1"
 
 # Update hyprpaper config
-echo "preload = $WALL" > ~/.config/hypr/hyprpaper.conf
-echo "wallpaper = , $WALL" >> ~/.config/hypr/hyprpaper.conf
+sed -i "s/path =*$/path = $WALL/g" ~/.config/hypr/hyprpaper.conf
 
 # Update hyprlock background
 awk -v newpath="$WALL" '
@@ -23,7 +22,7 @@ in_block && /^\s*path\s*=/ { sub(/=.*/, "= " newpath) }
 ' ~/.config/hypr/hyprlock.conf > ~/.config/hypr/hyprlock.conf.tmp && mv ~/.config/hypr/hyprlock.conf.tmp ~/.config/hypr/hyprlock.conf
 
 # Apply wallpaper
-hyprctl hyprpaper reload ,"$WALL"
+hyprctl hyprpaper wallpaper ", $WALL"
 
 # matugen
 matugen image $WALL
