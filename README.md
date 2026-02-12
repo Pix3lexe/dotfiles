@@ -12,7 +12,7 @@ Welcome to my dotfiles repository! The setup script is designed for arch but eve
 
 ---
 
-## <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544L153.5 543.7C121.2 540.4 96 513.1 96 480L96 160C96 124.7 124.7 96 160 96L480 96zM160 384L160 480L288 480L288 384L160 384zM352 384L352 480L480 480L480 384L352 384zM160 320L288 320L288 224L160 224L160 320zM352 320L480 320L480 224L352 224L352 320z"/></svg> **Table of Contents**
+## **Table of Contents**
 
 - [Overview](#overview)
 - [Features](#features)
@@ -24,7 +24,7 @@ Welcome to my dotfiles repository! The setup script is designed for arch but eve
 
 ---
 
-##  **Overview** <a name="overview"></a>
+## **Overview** <a name="overview"></a>
 
 Dotfiles are configuration files for various programs and tools, often starting with a dot (`.`). This repository:
 
@@ -36,7 +36,7 @@ Dotfiles are configuration files for various programs and tools, often starting 
 
 ---
 
-##  **Features** <a name="features"></a>
+## **Features** <a name="features"></a>
 
 - Configurations for tools like:
   - **Neovim** (`nvim`)
@@ -48,7 +48,7 @@ Dotfiles are configuration files for various programs and tools, often starting 
 
 ---
 
-##  **Installation** <a name="installation"></a>
+## **Installation** <a name="installation"></a>
 
 ### **Prerequisites**
 
@@ -66,7 +66,7 @@ Dotfiles are configuration files for various programs and tools, often starting 
    - **✏️Note**: If you only want to have a specific config look up [Usage](#usage)
    - **⚠️Warning**: This script does not guarantee that every optional dependency is installed (eg. a latex compiler so that vimtex works). Install them by yourself if you need them.
 
-###  **Hyprland Dependencies**
+### **Hyprland Dependencies**
 
 Before using these dotfiles, make sure the following dependencies are installed if you're using Hyprland (these are specific to the Hyprland-based environment and related tools) or just run the [setup script](#installation).<br>
 
@@ -88,7 +88,7 @@ Before using these dotfiles, make sure the following dependencies are installed 
 
 ---
 
-##  **Structure** <a name="structure"></a>
+## **Structure** <a name="structure"></a>
 
 The repository is structured to be modular, with each folder representing a specific tool or program.
 
@@ -107,7 +107,7 @@ Each directory contains the relevant files, arranged in the same structure as th
 
 ---
 
-##  **Usage** <a name="usage"></a>
+## **Usage** <a name="usage"></a>
 
 ### Apply Specific Configurations
 
@@ -127,7 +127,7 @@ stow -D -t ~ nvim
 
 ---
 
-##  **Screenshots** <a name="screenshots"></a>
+## **Screenshots** <a name="screenshots"></a>
 
 - **Terminal**
   ![image](https://github.com/user-attachments/assets/97dacc7f-48ee-4661-ae6e-dcfafa3c9dc9)
@@ -149,6 +149,6 @@ stow -D -t ~ nvim
 
 ---
 
-##  **Contact** <a name="contact"></a>
+## **Contact** <a name="contact"></a>
 
 If you have questions or suggestions, feel free to reach out via GitHub Issues.
