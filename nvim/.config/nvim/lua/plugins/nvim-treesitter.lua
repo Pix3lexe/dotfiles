@@ -1,6 +1,6 @@
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
-  event = { 'BufReadPost', 'BufNewFile' },
+  event = { 'BufReadPost', 'BufNewFile', 'FileType' },
   build = ':TSUpdate',
   config = function()
     require('nvim-treesitter.configs').setup {
