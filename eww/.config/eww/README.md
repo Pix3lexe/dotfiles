@@ -1,9 +1,17 @@
 # Eww configuration
 
-Unfortunately you have to do some setting up for this widget to work. Will try to make this easier in later updates.
+Unfortunately you have to do some setting up for this widget to work. Will try to make this easier in later updates. <br>
+Currently supported formats: `jpg`, `png` and `jpeg` <br>
 
-- If you want to set a wallpaper engine background, install [linux-wallpaperengine](https://github.com/Almamu/linux-wallpaperengine)
-- Adjust `eww.yuck` for your display configuration:
+### How to add wallpapers
+
+1. Place them in `~/.config/backgrounds/`
+2. Run `~/.config/eww/scripts/thumbnail_generator.sh`
+
+### Wallpaper Engine
+
+If you want to set a wallpaper engine background, install [linux-wallpaperengine](https://github.com/Almamu/linux-wallpaperengine).
+Adjust `eww.yuck` for your display configuration:
 
 1. Edit these booleans:
 
