@@ -25,6 +25,6 @@ in_block && /^\s*path\s*=/ { sub(/=.*/, "= " newpath) }
 hyprctl hyprpaper wallpaper ", $WALL"
 
 # matugen
-matugen image $WALL
+matugen image $WALL --source-color-index 0
 killall -9 swaync
 swaync &
