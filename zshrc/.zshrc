@@ -99,8 +99,3 @@ export GTK_IM_MODULE='fcitx'
 export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im-fcitx'
-
-_fix_cursor(){
-    echo -ne '\e[3 q'
-}
-precmd_functions+=(_fix_cursor)
