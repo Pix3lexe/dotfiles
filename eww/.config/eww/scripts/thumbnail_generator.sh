@@ -1,13 +1,28 @@
-#!/bin/bash
+#!/usr/bin/env bash
+THUMBNAIL_WIDTH="250"
+THUMBNAIL_HEIGHT="141"
 
-mkdir -p ~/.config/eww/thumbnails
-mkdir -p ~/.config/backgrounds/symlinks
-rm -rf ~/.config/eww/thumbnails/*
-rm -rf ~/.config/backgrounds/symlinks/*
+CACHE_DIR="$HOME/.cache/wallpaper-selector"
+WALLPAPER_DIR="$HOME/.config/backgrounds/symlinks"
+SOURCE_DIR="$HOME/.config/backgrounds"
 
-find ~/.config/backgrounds/ -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) -exec ln -sf {} ~/.config/backgrounds/symlinks/ \;
-find ~/.config/backgrounds/walls-catppuccin-mocha -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) -exec ln -sf {} ~/.config/backgrounds/symlinks/ \;
+mkdir -p "$CACHE_DIR"
+mkdir -p "$WALLPAPER_DIR"
 
+# Clear old thumbnails
+rm -rf "$CACHE_DIR"/*
+rm -rf "$WALLPAPER_DIR"/*
 
-find ~/.config/backgrounds/symlinks -type l \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) \
-| parallel magick {} -thumbnail 400x240 ~/.config/eww/thumbnails/{/}
+# Create symlinks for all wallpapers
+find "$SOURCE_DIR" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) \
+  -exec ln -sf {} "$WALLPAPER_DIR"/ \;
+
+# Additional folders
+find "$SOURCE_DIR/walls-catppuccin-mocha" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) \
+  -exec ln -sf {} "$WALLPAPER_DIR"/ \;
+
+# Generate thumbnails in parallel
+find "$WALLPAPER_DIR" -type l \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) \
+  | parallel magick {} -thumbnail "${THUMBNAIL_WIDTH}x${THUMBNAIL_HEIGHT}^" \
+                       -gravity center -extent "${THUMBNAIL_WIDTH}x${THUMBNAIL_HEIGHT}" \
+                       "$CACHE_DIR"/'{/}.png'
