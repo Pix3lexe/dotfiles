@@ -18,7 +18,6 @@ generate_thumbnail() {
 
 # Generate thumbnails and create menu items
 generate_menu() {
-
     # Then add all wallpapers
     for img in "$WALLPAPER_DIR"/*.{jpg,jpeg,png}; do
         # Skip if no matches found
@@ -40,7 +39,7 @@ selected=$(generate_menu | wofi --show dmenu \
     --cache-file /dev/null \
     --conf ~/.config/wofi/wallpaper.conf \
     --style ~/.config/wofi/wallpaper.css \
-  )
+)
 
 # Set wallpaper if one was selected
 if [ -n "$selected" ]; then
