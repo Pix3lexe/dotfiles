@@ -3,10 +3,13 @@
 WALLPAPER_DIR="$HOME/.config/backgrounds/symlinks"  # Change this to your wallpaper directory
 CACHE_DIR="$HOME/.cache/wallpaper-selector"
 WALLPAPER_SCRIPT="$HOME/.config/eww/scripts/change_wallpaper.sh"
+THUMBNAIL_GENERATOR_SCRIPT="$HOME/.config/eww/scripts/thumbnail_generator.sh"
 THUMBNAIL_WIDTH="250"  # Size of thumbnails in pixels (16:9)
 THUMBNAIL_HEIGHT="141"
 # Create cache directory if it doesn't exist
-mkdir -p "$CACHE_DIR"
+if [[ ! -d "$CACHE_DIR" ]]; then
+    $THUMBNAIL_GENERATOR_SCRIPT
+fi
 
 # Function to generate thumbnail
 generate_thumbnail() {
