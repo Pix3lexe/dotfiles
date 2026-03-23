@@ -2,7 +2,7 @@
 # Configuration
 WALLPAPER_DIR="$HOME/.config/backgrounds/symlinks"  # Change this to your wallpaper directory
 CACHE_DIR="$HOME/.cache/wallpaper-selector"
-WALLPAPER_SCRIPT="$HOME/.config/eww/scripts/change-wallpaper.sh"
+WALLPAPER_SCRIPT="$HOME/.config/eww/scripts/change_wallpaper.sh"
 THUMBNAIL_WIDTH="250"  # Size of thumbnails in pixels (16:9)
 THUMBNAIL_HEIGHT="141"
 # Create cache directory if it doesn't exist
