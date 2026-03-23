@@ -1,5 +1,5 @@
 /*
- * Wofi style generated with Matugen
+ * Wofi wallpaper picker style generated with Matugen
  */
 
 * {
@@ -8,7 +8,7 @@
 
 window {
   margin: 0px;
-  color: {{ colors.primary.default.hex }};
+  color: #c7bfff;
   border-radius: 15px;
   background: transparent;
 }
@@ -17,7 +17,7 @@ window {
   padding: 5px 25px 5px 5px;
   margin: 10px 10px 0 10px;
   border: none;
-  color: {{ colors.primary.default.hex }};
+  color: #c7bfff;
   font-weight: bold;
   background: transparent;
   outline: none;
@@ -30,7 +30,7 @@ window {
 
 #inner-box {
   margin: 4px;
-  color: {{ colors.primary.default.hex }};
+  color: #c7bfff;
   background: transparent;
   border-radius: 15px;
 }
@@ -41,7 +41,7 @@ window {
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.2);
   padding: 5px;
-  border: 2px solid {{ colors.primary.default.hex }};
+  border: 2px solid #c7bfff;
 }
 
 #scroll {
@@ -52,7 +52,18 @@ window {
 }
 
 #img {
-  margin-right: 15px;
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 1;
 }
 
 #img:selected {
@@ -60,12 +71,17 @@ window {
   border-radius: 15px;
 }
 
+#text {
+  opacity: 0.8;
+}
+
 #text:selected {
-  color: {{ colors.primary.default.hex }};
+  color: #c7bfff;
   margin: 0px 0px;
   border: none;
   border-radius: 15px;
   background: transparent;
+  opacity: 1;
 }
 
 #entry {
@@ -74,7 +90,6 @@ window {
   border: none;
   border-radius: 10px;
   background-color: transparent;
-  opacity: 0.8;
 }
 
 #entry:selected {
@@ -82,6 +97,5 @@ window {
   border: none;
   border-radius: 10px;
   background: rgba(137, 180, 250, 0.2);
-  opacity: 1;
   font-weight: bold;
 }

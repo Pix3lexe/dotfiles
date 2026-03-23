@@ -26,3 +26,7 @@ output_path = '~/.config/yazi/theme.toml'
 [templates.wofi]
 input_path = '~/.config/matugen/templates/wofi-colors.css'
 output_path = '~/.config/wofi/style.css'
+
+[templates.wofi_wallpaper]
+input_path = '~/.config/matugen/templates/wofi-wallpaper-colors.css'
+output_path = '~/.config/wofi/wallpaper.css'
