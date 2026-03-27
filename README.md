@@ -63,8 +63,9 @@ Dotfiles are configuration files for various programs and tools, often starting 
    ./setup.sh
    ```
 
-   - **✏️Note**: If you only want to have a specific config look up [Usage](#usage)
-   - **⚠️Warning**: This script does not guarantee that every optional dependency is installed (eg. a latex compiler so that vimtex works). Install them by yourself if you need them.
+   - **Note**: If you only want to have a specific config look up [Usage](#usage)
+   - **Note**: You might have to restart your computer after this
+   - **Warning**: This script does not guarantee that every optional dependency is installed (eg. a latex compiler so that vimtex works). Install them by yourself if you need them.
 
 ### **Hyprland Dependencies**
 
