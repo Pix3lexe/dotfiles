@@ -17,8 +17,8 @@ Welcome to my dotfiles repository! The setup script is designed for arch but eve
 - [Overview](#overview)
 - [Features](#features)
 - [Installation](#installation)
-- [Structure](#structure)
 - [Usage](#usage)
+- [Structure](#structure)
 - [Screenshots](#screenshots)
 - [Contact](#contact)
 
