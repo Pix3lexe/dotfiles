@@ -17,6 +17,21 @@ for dir in $(find . -maxdepth 1 -mindepth 1 -type d ! -name ".git" ! -name ".git
     stow -t ~ "$dir_name"
 done
 
+# change default shell if it's not already zsh
+if command -v zsh &> /dev/null; then
+    if [ "$SHELL" != "$(which zsh)" ]; then
+        echo "Changing default shell to zsh..."
+        chsh -s "$(which zsh)" "$USER"
+    fi
+    ZSHRC="$HOME/.zshrc"
+    if [ ! -f "$ZSHRC" ]; then
+        echo "Creating default .zshrc..."
+        touch "$ZSHRC"
+    fi
+    echo "Sourcing .zshrc..."
+    source "$ZSHRC"
+fi
+
 # git submodules
 git submodule update --init --recursive
 git lfs install

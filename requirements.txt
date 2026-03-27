@@ -18,7 +18,6 @@ waybar
 ttf-font-awesome
 swaync
 hyprlock
-hypridle
 hyprpaper
 nwg-look
 xdg-desktop-portal-gtk
