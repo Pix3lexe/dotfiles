@@ -28,7 +28,7 @@ Welcome to my dotfiles repository! The setup script is designed for arch but eve
 
 Dotfiles are configuration files for various programs and tools, often starting with a dot (`.`). This repository:
 
-- Provides a backup of my preferred environment setup.
+- Provides a backup of my preferred environment setup on Hyprland.
 - Designed for Linux-based systems (tested on Arch Linux).
 - Allows quick deployment across systems.
 - Uses **GNU Stow**.
@@ -60,7 +60,7 @@ Dotfiles are configuration files for various programs and tools, often starting 
 
 ### **Setup Options**
 
-1. **Fast Way**
+1. **Fast Way (only works on Arch Linux)**
    1. Install [paru](https://github.com/Morganamilo/paru) or [yay](https://github.com/Jguer/yay) as an AUR helper
    1. Run the setup script to install everything and deploy configurations:
 
