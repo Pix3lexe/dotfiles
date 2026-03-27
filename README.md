@@ -61,7 +61,7 @@ Dotfiles are configuration files for various programs and tools, often starting 
 ### **Setup Options**
 
 1. **Fast Way**
-   1. Install [paru](https://github.com/Morganamilo/paru) or [yay](https://github.com/Jguer/yay) as an AUR helper (my recommendation: **paru**)
+   1. Install [paru](https://github.com/Morganamilo/paru) or [yay](https://github.com/Jguer/yay) as an AUR helper
    1. Run the setup script to install everything and deploy configurations:
 
    ```bash
