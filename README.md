@@ -57,7 +57,12 @@ Dotfiles are configuration files for various programs and tools, often starting 
    git clone https://github.com/Pix3lexe/dotfiles.git ~/dotfiles
    cd ~/dotfiles
    ```
-2. Run setup script to install everything and deploy configurations:
+
+### **Setup Options**
+
+1. **Fast Way**
+   1. Install [paru](https://github.com/Morganamilo/paru) or [yay](https://github.com/Jguer/yay) as an AUR helper (my recommendation: **paru**)
+   1. Run the setup script to install everything and deploy configurations:
 
    ```bash
    ./setup.sh
@@ -67,44 +72,26 @@ Dotfiles are configuration files for various programs and tools, often starting 
    - **Note**: You might have to restart your computer after this
    - **Warning**: This script does not guarantee that every optional dependency is installed (eg. a latex compiler so that vimtex works). Install them by yourself if you need them.
 
-### **Hyprland Dependencies**
-
-Before using these dotfiles, make sure the following dependencies are installed if you're using Hyprland (these are specific to the Hyprland-based environment and related tools) or just run the [setup script](#installation).<br>
-
-- **hyprland**: Window manager for Wayland.
-- **wofi**: Application launcher.
-- **waybar**: Status bar for Wayland.
-- **matugen**: Materialized colors based on wallpaper.
-- **ttf-font-awesome**: Icon font for status bars and UI customization.
-- **hyprshot**: Screenshot tool for Hyprland.
-- **swaync**: Notification daemon.
-- **hyprlock**: Screen locker for Hyprland.
-- **hypridle**: Idle management tool.
-- **hyprpaper**: Wallpaper manager for Hyprland.
-- **nwg-look**: GTK theme switcher for Wayland.
-- **xdg-desktop-portal-gtk**: Desktop portal for GTK integration.
-- **xdg-desktop-portal-hyprland**: Desktop portal specific to Hyprland.
-- **catppuccin-gtk-theme-mocha**: GTK theme for a consistent aesthetic.
-- **wl-clipboard**: Clipboard manager for Wayland.
-
----
-
-## **Structure** <a name="structure"></a>
-
-The repository is structured to be modular, with each folder representing a specific tool or program.
-
-```
-dotfiles/
-├── nvim/            # Configuration for Neovim
-│   └── .config/nvim/
-├── zsh/             # Zsh shell configuration
-│   └── .zshrc
-├── tmux/            # Tmux configuration
-│   └── .tmux.conf
-└── ...
-```
-
-Each directory contains the relevant files, arranged in the same structure as their destination.
+2. **Manual Way**
+   1. Install all dependencies by yourself. These include:
+      - **hyprland**: Window manager for Wayland.
+      - **wofi**: Application launcher.
+      - **waybar**: Status bar for Wayland.
+      - **matugen**: Materialized colors based on wallpaper.
+      - **ttf-font-awesome**: Icon font for status bars and UI customization.
+      - **hyprshot**: Screenshot tool for Hyprland.
+      - **swaync**: Notification daemon.
+      - **hyprlock**: Screen locker for Hyprland.
+      - **hypridle**: Idle management tool.
+      - **hyprpaper**: Wallpaper manager for Hyprland.
+      - **nwg-look**: GTK theme switcher for Wayland.
+      - **xdg-desktop-portal-gtk**: Desktop portal for GTK integration.
+      - **xdg-desktop-portal-hyprland**: Desktop portal specific to Hyprland.
+      - **catppuccin-gtk-theme-mocha**: GTK theme for a consistent aesthetic.
+      - **wl-clipboard**: Clipboard manager for Wayland.
+   - **Note**: You may want to look at `requirements.txt` for further info
+   - **Warning**: It is possible that I forgot some dependencies, so check if everything works
+   2. Apply the configurations you want. Look up [Usage](#usage).
 
 ---
 
@@ -125,6 +112,25 @@ To remove a symlink created by Stow (eg. nvim):
 ```bash
 stow -D -t ~ nvim
 ```
+
+---
+
+## **Structure** <a name="structure"></a>
+
+The repository is structured to be modular, with each folder representing a specific tool or program.
+
+```
+dotfiles/
+├── nvim/            # Configuration for Neovim
+│   └── .config/nvim/
+├── zsh/             # Zsh shell configuration
+│   └── .zshrc
+├── tmux/            # Tmux configuration
+│   └── .tmux.conf
+└── ...
+```
+
+Each directory contains the relevant files, arranged in the same structure as their destination.
 
 ---
 
