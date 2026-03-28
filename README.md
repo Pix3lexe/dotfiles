@@ -79,10 +79,10 @@ Dotfiles are configuration files for various programs and tools, often starting 
       - **waybar**: Status bar for Wayland.
       - **matugen**: Materialized colors based on wallpaper.
       - **ttf-font-awesome**: Icon font for status bars and UI customization.
+      - **ttf-jetbrains-mono-nerd**: The font I use in Terminal, Waybar and other places.
       - **hyprshot**: Screenshot tool for Hyprland.
       - **swaync**: Notification daemon.
       - **hyprlock**: Screen locker for Hyprland.
-      - **hypridle**: Idle management tool.
       - **hyprpaper**: Wallpaper manager for Hyprland.
       - **nwg-look**: GTK theme switcher for Wayland.
       - **xdg-desktop-portal-gtk**: Desktop portal for GTK integration.
