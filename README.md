@@ -80,7 +80,7 @@ Dotfiles are configuration files for various programs and tools, often starting 
       - **matugen**: Materialized colors based on wallpaper.
       - **ttf-font-awesome**: Icon font for status bars and UI customization.
       - **ttf-jetbrains-mono-nerd**: The font I use in Terminal, Waybar and other places.
-      - **hyprshot**: Screenshot tool for Hyprland.
+      - **hyprquickframe**: Quickshell Screenshot tool for Hyprland.
       - **swaync**: Notification daemon.
       - **hyprlock**: Screen locker for Hyprland.
       - **hyprpaper**: Wallpaper manager for Hyprland.

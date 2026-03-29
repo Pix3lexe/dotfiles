@@ -27,7 +27,7 @@ parallel
 
 
 # AUR dependencies
-hyprshot
+hyprquickframe-git
 catppuccin-gtk-theme-mocha
 eww
 matugen-bin
