@@ -26,5 +26,3 @@ hyprctl hyprpaper wallpaper ", $WALL"
 
 # matugen
 matugen image $WALL --source-color-index 0
-killall -9 swaync
-swaync &
