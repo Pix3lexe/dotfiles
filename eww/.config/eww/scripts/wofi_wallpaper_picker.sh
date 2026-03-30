@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Configuration
-WALLPAPER_DIR="$HOME/.config/backgrounds/symlinks"  # Change this to your wallpaper directory
+WALLPAPER_DIR="$HOME/.config/backgrounds/symlinks"
 CACHE_DIR="$HOME/.cache/wallpaper-selector"
 WALLPAPER_SCRIPT="$HOME/.config/eww/scripts/change_wallpaper.sh"
 THUMBNAIL_GENERATOR_SCRIPT="$HOME/.config/eww/scripts/thumbnail_generator.sh"
