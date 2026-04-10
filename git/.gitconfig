@@ -2,12 +2,6 @@
     autocrlf = input
     pager = delta
 
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge --skip -- %f
-	process = git-lfs filter-process --skip
-    required = true
-
 [delta]
     navigate = true
     dark = true
@@ -15,3 +9,8 @@
 
 [merge]
     conflictstyle = zdiff3
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
