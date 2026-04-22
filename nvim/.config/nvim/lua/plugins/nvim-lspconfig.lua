@@ -86,7 +86,7 @@ return { -- Main LSP plugin
     end
 
     local servers = {
-      -- clangd = {},
+      clangd = {},
       pyright = {},
 
       lua_ls = {
