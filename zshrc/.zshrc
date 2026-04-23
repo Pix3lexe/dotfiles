@@ -74,8 +74,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # aliases
-alias ls='ls --color'
-alias ll='ls -lisa'
+alias ls='eza --grid --icons'
+alias ll='eza -l --all --icons'
 alias cd..='cd ..'
 alias rmorphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias x='chmod u+x'

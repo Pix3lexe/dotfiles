@@ -24,6 +24,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 imagemagick
 parallel
+eza
 
 
 # AUR dependencies
