@@ -3,8 +3,8 @@ THUMBNAIL_WIDTH="250"
 THUMBNAIL_HEIGHT="141"
 
 CACHE_DIR="$HOME/.cache/wallpaper-selector"
-WALLPAPER_DIR="$HOME/.config/backgrounds/symlinks"
-SOURCE_DIR="$HOME/.config/backgrounds"
+WALLPAPER_DIR="$HOME/.config/wallpapers/symlinks"
+SOURCE_DIR="$HOME/.config/wallpapers"
 
 mkdir -p "$CACHE_DIR"
 mkdir -p "$WALLPAPER_DIR"

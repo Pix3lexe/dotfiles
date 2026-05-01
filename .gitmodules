@@ -1,3 +1,3 @@
-[submodule "backgrounds/.config/backgrounds/walls-catppuccin-mocha"]
-	path = backgrounds/.config/backgrounds/walls-catppuccin-mocha
+[submodule "wallpapers/.config/wallpapers/walls-catppuccin-mocha"]
+	path = wallpapers/.config/wallpapers/walls-catppuccin-mocha
 	url = https://github.com/orangci/walls-catppuccin-mocha.git
