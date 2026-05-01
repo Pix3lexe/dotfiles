@@ -16,6 +16,7 @@ rm -rf "$WALLPAPER_DIR"/*
 # Create symlinks for all wallpapers
 find "$SOURCE_DIR"/ -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) -exec ln -sf {} "$WALLPAPER_DIR" \;
 find "$SOURCE_DIR"/walls-catppuccin-mocha -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) -exec ln -sf {} "$WALLPAPER_DIR" \;
+find "$SOURCE_DIR"/personal -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) -exec ln -sf {} "$WALLPAPER_DIR" \;
 
 
 # Generate thumbnails in parallel
