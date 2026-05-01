@@ -39,7 +39,7 @@ git submodule foreach git lfs pull
 
 # generating wallpaper thumbnails + theme
 ~/.config/eww/scripts/thumbnail_generator.sh
-~/.config/eww/scripts/change_wallpaper.sh ~/.config/backgrounds/walls-catppuccin-mocha/astronaut.png
+~/.config/eww/scripts/change_wallpaper.sh ~/.config/wallpapers/walls-catppuccin-mocha/astronaut.png
 sudo usermod -aG input $USER # for capslock waybar indicator
 
 # Install Sweet-cursors
