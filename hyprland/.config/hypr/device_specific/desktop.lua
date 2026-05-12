@@ -31,6 +31,9 @@ hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("__GL_GSYNC_ALLOWED", "1")
 
+local smw = hl.plugin.split_monitor_workspaces
+smw.monitor_priority({ "DP-1", "DP-3", "DP-2" })
+
 hl.config({
 	input = {
 		sensitivity = -0.5,
