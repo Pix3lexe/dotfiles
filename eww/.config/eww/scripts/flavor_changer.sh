@@ -22,12 +22,12 @@ if [ -f "$EWW_YUCK" ]; then
     sed -i "s/(defvar current_flavor \"[a-zA-Z0-9_]*\")/(defvar current_flavor \"$flavor\")/g" "$EWW_YUCK"
 fi
 
-# 2. Replace in ~/.config/hypr/hyprland.conf:
+# 2. Replace in ~/.config/hypr/hyprland.lua:
 # a) env = GTK_THEME, catppuccin-mocha-[CURRENT_flavor]-standard+default
-HYPRLAND_CONF="$HOME/.config/hypr/hyprland.conf"
+HYPRLAND_CONF="$HOME/.config/hypr/hyprland.lua"
 if [ -f "$HYPRLAND_CONF" ]; then
     # Replace GTK_THEME
-    sed -i "s/env = GTK_THEME, catppuccin-mocha-\([a-zA-Z]*\)-standard+default/env = GTK_THEME, catppuccin-mocha-$flavor-standard+default/g" "$HYPRLAND_CONF"
+    sed -i "s/hl.env(\"GTK_THEME\", \"catppuccin-mocha-\([a-zA-Z]*\)-standard+default\")/hl.env(\"GTK_THEME\", \"catppuccin-mocha-$flavor-standard+default\")/g" "$HYPRLAND_CONF"
 
     hyprctl reload
 

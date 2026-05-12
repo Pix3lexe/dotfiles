@@ -6,9 +6,12 @@ output_path = '~/.config/swaync/matugen/colors.css'
 post_hook = 'swaync-client -rs'
 
 [templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/colors.lua'
+
+[templates.hyprlock]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
-post_hook = 'hyprctl reload'
 
 [templates.waybar]
 input_path = '~/.config/matugen/templates/colors.css'
