@@ -27,9 +27,13 @@ hl.on("hyprland.start", function()
 end)
 
 -- Nvidia specific variables
-hl.env("GBM_BACKEND", "nvidia-drm")
-hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
+hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+hl.env("GBM_BACKEND", "nvidia-drm")
+hl.env("MOZ_ENABLE_WAYLAND", "1")
+hl.env("__GL_MaxFramesAllowed", "1")
+hl.env("PROTON_ENABLE_NGX_UPDATER", "1")
+hl.env("VDPAU_DRIVER", "nvidia")
 hl.env("__GL_GSYNC_ALLOWED", "1")
 
 local smw = hl.plugin.split_monitor_workspaces
