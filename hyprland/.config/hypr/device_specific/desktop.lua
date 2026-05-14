@@ -4,6 +4,7 @@ hl.monitor({
 	position = "0x0",
 	scale = "1",
 	vrr = 3,
+	bitdepth = 10,
 })
 
 hl.monitor({
@@ -42,5 +43,9 @@ smw.monitor_priority({ "DP-1", "DP-3", "DP-2" })
 hl.config({
 	input = {
 		sensitivity = -0.5,
+	},
+
+	render = {
+		cm_auto_hdr = 2,
 	},
 })
