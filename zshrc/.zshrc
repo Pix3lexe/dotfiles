@@ -26,10 +26,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # plugins
-zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
 
 # snippets
 zinit snippet OMZP::git
@@ -44,6 +42,8 @@ zinit snippet OMZP::command-not-found
 autoload -U compinit && compinit
 
 zinit cdreplay -q
+
+zinit light Aloxaf/fzf-tab
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -77,14 +77,11 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='eza -G --icons=always --hyperlink'
 alias ll='eza -la --icons=always --hyperlink'
 alias cd..='cd ..'
-alias rmorphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias rmorphans='pacman -Qtdq | sudo pacman -Rns -'
 alias x='chmod u+x'
 alias c='clear'
 alias nv='nvim'
-alias dockfix='$HOME/backups/dockfix.sh'
-alias saveconf='/home/simon/backups/gnome_saveconf.sh'
 alias lg='lazygit'
-alias yz='yazi'
 
 # shell integrations
 eval "$(fzf --zsh)"
@@ -92,7 +89,9 @@ eval "$(zoxide init --cmd cd zsh)"
 export EDITOR="nvim"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if command -v pyenv >/dev/null; then
+	eval "$(pyenv init -)"
+fi
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 export GTK_IM_MODULE='fcitx'
@@ -108,3 +107,5 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+zinit light zsh-users/zsh-syntax-highlighting
