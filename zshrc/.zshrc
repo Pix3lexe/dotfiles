@@ -26,6 +26,10 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # plugins
+# blockf: let zinit manage the completions instead of the plugin touching fpath
+# atpull: re-sync the completion symlinks after every update, so completions
+#         dropped upstream don't leave dangling links that compinit warns about
+zinit ice blockf atpull'zinit cclear; zinit creinstall -q .'
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
@@ -107,5 +111,10 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+_fix_cursor(){
+    echo -ne '\e[3 q'
+}
+precmd_functions+=(_fix_cursor)
 
 zinit light zsh-users/zsh-syntax-highlighting
