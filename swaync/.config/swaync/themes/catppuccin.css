@@ -28,7 +28,11 @@ notificationwindow,
 blankwindow {
   background: transparent;
 }
+notificationwindow {
+  backdrop-filter: blur(10px);
+}
 .control-center {
+  backdrop-filter: blur(10px);
   background: alpha(@background, 0.55);
   border: 2px solid @primary;
 }
