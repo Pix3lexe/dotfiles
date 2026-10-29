@@ -177,6 +177,23 @@ smw.setup({
 	keep_focused = true,
 })
 
+-- Workaround for upstream startup bugs in split-monitor-workspaces (leave it here until upstream is fixed):
+-- 1. Only the newly added monitor's priority is known when ranges are computed,
+--   so register all priorities upfront.
+-- 2. Workspaces get created on the focused monitor and moved afterwards, leaving
+--   it on a wrong fallback workspace. Workspace rules create them in place.
+local smw_globals = require("plugins.split-monitor-workspaces.lua.globals")
+for i, name in ipairs(device.monitor_priority) do
+	smw_globals.monitor_priorities[name] = { value = i - 1, from_config = true }
+	local base = (i - 1) * workspaces
+	for ws = base + 1, base + workspaces do
+		hl.workspace_rule({ workspace = tostring(ws), monitor = name, default = ws == base + 1 })
+	end
+end
+hl.on("hyprland.start", function()
+	hl.dispatch(hl.dsp.focus({ workspace = "1" }))
+end)
+
 for i = 1, workspaces do
 	local key = i % workspaces
 	hl.bind("SUPER + " .. key, smw.workspace(tostring(i)))
