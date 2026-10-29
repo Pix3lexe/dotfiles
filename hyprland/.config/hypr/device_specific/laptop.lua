@@ -7,7 +7,6 @@ hl.monitor({
 })
 
 hl.on("hyprland.start", function()
-	hl.exec_cmd("hyprpm reload")
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("waybar & swaync & hypridle & hyprpaper")
 end)
@@ -24,11 +23,12 @@ hl.device({
 	kb_layout = "de",
 })
 
-local smw = hl.plugin.split_monitor_workspaces
-smw.monitor_priority({ "eDP-1", "HDMI-A-1" })
-
 hl.config({
 	input = {
 		sensitivity = 0,
 	},
 })
+
+return {
+	monitor_priority = { "eDP-1", "HDMI-A-1" },
+}

@@ -1,4 +1,5 @@
-require("device_specific.desktop")
+package.path = package.path .. ";./?.lua;./?/init.lua"
+local device = require("device_specific.desktop")
 
 local colors = require("colors")
 
@@ -91,16 +92,6 @@ hl.config({
 			natural_scroll = true,
 		},
 	},
-
-	plugin = {
-		split_monitor_workspaces = {
-			count = workspaces,
-			enable_persistent_workspaces = 0,
-			link_monitors = 0,
-			enable_hy3 = 0,
-			keep_focused = 1,
-		},
-	},
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
@@ -177,15 +168,19 @@ hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }))
 hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
 
-local smw = hl.plugin.split_monitor_workspaces
+local smw = require("plugins.split-monitor-workspaces")
+smw.setup({
+	workspace_count = workspaces,
+	monitor_priority = device.monitor_priority,
+	enable_persistent_workspaces = false,
+	link_monitors = false,
+	keep_focused = true,
+})
+
 for i = 1, workspaces do
 	local key = i % workspaces
-	hl.bind("SUPER + " .. key, function()
-		return smw.workspace(i)
-	end)
-	hl.bind("SUPER + SHIFT + " .. key, function()
-		return smw.move_to_workspace_silent(i)
-	end)
+	hl.bind("SUPER + " .. key, smw.workspace(tostring(i)))
+	hl.bind("SUPER + SHIFT + " .. key, smw.move_to_workspace_silent(tostring(i)))
 end
 
 -- Example special workspace (scratchpad)

@@ -1,3 +1,6 @@
 [submodule "wallpapers/.config/wallpapers/walls-catppuccin-mocha"]
 	path = wallpapers/.config/wallpapers/walls-catppuccin-mocha
 	url = https://github.com/orangci/walls-catppuccin-mocha.git
+[submodule "hyprland/.config/hypr/plugins/split-monitor-workspaces"]
+	path = hyprland/.config/hypr/plugins/split-monitor-workspaces
+	url = https://github.com/zjeffer/split-monitor-workspaces

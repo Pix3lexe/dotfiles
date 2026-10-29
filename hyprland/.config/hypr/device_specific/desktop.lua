@@ -22,7 +22,6 @@ hl.monitor({
 })
 
 hl.on("hyprland.start", function()
-	hl.exec_cmd("hyprpm reload")
 	hl.exec_cmd("nm-applet & fcitx5 -d")
 	hl.exec_cmd("waybar & swaync & hypridle & hyprpaper")
 end)
@@ -37,9 +36,6 @@ hl.env("PROTON_ENABLE_NGX_UPDATER", "1")
 hl.env("VDPAU_DRIVER", "nvidia")
 hl.env("__GL_GSYNC_ALLOWED", "1")
 
-local smw = hl.plugin.split_monitor_workspaces
-smw.monitor_priority({ "DP-1", "DP-3", "DP-2" })
-
 hl.config({
 	input = {
 		sensitivity = -0.5,
@@ -49,3 +45,7 @@ hl.config({
 		cm_auto_hdr = 2,
 	},
 })
+
+return {
+	monitor_priority = { "DP-1", "DP-3", "DP-2" },
+}
