@@ -118,3 +118,6 @@ _fix_cursor(){
 precmd_functions+=(_fix_cursor)
 
 zinit light zsh-users/zsh-syntax-highlighting
+
+# matugen-generated syntax highlighting colors
+[[ -f ~/.config/zsh/highlight-colors.zsh ]] && source ~/.config/zsh/highlight-colors.zsh

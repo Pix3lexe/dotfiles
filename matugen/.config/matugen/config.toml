@@ -34,3 +34,7 @@ output_path = '~/.config/wofi/style.css'
 [templates.wofi_wallpaper]
 input_path = '~/.config/matugen/templates/wofi-wallpaper-colors.css'
 output_path = '~/.config/wofi/wallpaper.css'
+
+[templates.zsh_highlight]
+input_path = '~/.config/matugen/templates/zsh-highlight.zsh'
+output_path = '~/.config/zsh/highlight-colors.zsh'
